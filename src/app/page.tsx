@@ -5,7 +5,6 @@ import FeaturedPrograms from './components/sections/FeaturedPrograms';
 import RecentActivities from './components/sections/RecentActivities';
 import TestimonialSlider from './components/sections/TestimonialSlider';
 import CallToAction from './components/sections/CallToAction';
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   icons: {
