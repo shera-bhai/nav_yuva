@@ -15,28 +15,52 @@ export const metadata = {
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: 'Mr. Sumit Kumar',
-      role: 'Founder & Executive Director',
+      name: 'Mr. Parveen Kumar',
+      role: 'Director',
       image: '/assets/team/sumit.jpg',
       bio: 'With over 05 years of experience in social work, Sumit founded the organization with a vision to empower youth across all socioeconomic backgrounds.',
     },
     {
-      name: 'Mr. Harsh Yadav',
-      role: 'Technical Director',
-      image: 'https://ik.imagekit.io/w57hznch1e/harsh.png?updatedAt=1745849141518',
-      bio: 'Harsh oversees all our programs and ensures they create meaningful impact in the lives of women we serve.',
+      name: 'Mr. Sumit Kumar',
+      role: 'Director',
+      image: 'https://ik.imagekit.io/w57hznch1e/sumit.png?updatedAt=1745921231117',
+      bio: 'With over 05 years of experience in social work, Sumit founded the organization with a vision to empower youth across all socioeconomic backgrounds.',
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'Partnerships Manager',
+      name: 'Siddharth Sahray',
+      role: 'Outreach & PR Director',
       image: '/assets/team/michael.jpg',
       bio: 'Michael builds and maintains relationships with corporate partners, government agencies, and other NGOs to extend our reach.',
     },
     {
-      name: 'Sarah Johnson',
-      role: 'Community Outreach Coordinator',
+      name: 'Adv. Ankita Pandey',
+      role: 'Head of Women Empowerment Wing',
       image: '/assets/team/sarah.jpg',
       bio: 'Sarah works directly with communities to understand their needs and implement tailored empowerment programs.',
+    },
+    {
+      name: 'Ms. Mamta',
+      role: 'Head of Blood Donation Wing',
+      image: '/assets/team/sarah.jpg',
+      bio: 'Sarah works directly with communities to understand their needs and implement tailored empowerment programs.',
+    },
+    {
+      name: 'Mr. Deepak Nishal',
+      role: 'Treasurer',
+      image: '/assets/team/sarah.jpg',
+      bio: 'Sarah works directly with communities to understand their needs and implement tailored empowerment programs.',
+    },
+    {
+      name: 'Ms. Vandita',
+      role: 'Human Resource Manager',
+      image: '/assets/team/sarah.jpg',
+      bio: 'Sarah works directly with communities to understand their needs and implement tailored empowerment programs.',
+    },
+    {
+      name: 'Mr. Harsh Yadav',
+      role: 'Chief Technical Head',
+      image: 'https://ik.imagekit.io/w57hznch1e/harsh.png?updatedAt=1745849141518',
+      bio: 'Harsh oversees all our programs and ensures they create meaningful impact in the lives of women we serve.',
     },
   ];
 
@@ -90,10 +114,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Mission */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-64">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden cursor-default">
+              <div className="relative h-80">
                 <Image
-                  src="/images/mission.jpg"
+                  src="/assets/about/missionn.jpg"
                   alt="Our mission in action"
                   fill
                   className="object-cover"
@@ -108,10 +132,10 @@ export default function AboutPage() {
             </div>
 
             {/* Vision */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-64">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden cursor-default">
+              <div className="relative h-80">
                 <Image
-                  src="/images/vision.jpg"
+                  src="/assets/about/vision.jpg"
                   alt="Our vision for the future"
                   fill
                   className="object-cover"
@@ -186,7 +210,7 @@ export default function AboutPage() {
       </div>
 
       {/* Our Team */}
-      <div className="py-16 bg-gray-50">
+      {/* <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -198,7 +222,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="relative h-64">
                   <Image
                     src={member.image}
@@ -216,7 +240,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Join Us CTA */}
       <div className="bg-primary">

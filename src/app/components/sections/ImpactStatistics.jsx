@@ -4,7 +4,7 @@ export default function ImpactStatistics() {
     { id: 1, stat: '1,50,000+', label: 'Lives Impacted' },
     { id: 2, stat: '150+', label: 'Villages Reached' },
     { id: 3, stat: '230+', label: 'Programs Conducted' },
-    { id: 4, stat: '18,000+', label: 'Trees Planted' },
+    { id: 4, stat: '27,000+', label: 'Participants Gathered' },
   ];
 
   return (

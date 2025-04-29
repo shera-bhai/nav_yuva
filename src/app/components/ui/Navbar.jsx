@@ -29,8 +29,8 @@ export default function Navbar() {
               <Link href="https://rzp.io/rzp/cGixej34" target="_blank" 
               className="px-3 py-2 bg-[#23c5ca] text-white text-sm font-medium hover:text-black transition duration-300 ease-in-out"
               >Donate Us</Link>
-                <Link href="/impact-stories" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-dark">Impact Stories</Link>
-                <Link href="/resources" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-dark">Resources</Link>
+                {/* <Link href="/impact-stories" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-dark">Impact Stories</Link>
+                <Link href="/resources" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-dark">Resources</Link> */}
                 {/* <Link href="https://rzp.io/rzp/EdBQayel" target='_blank' // Test page
                       className="px-3 py-2 bg-[#23c5ca] text-white text-sm font-medium hover:bg-[#1aa3a3] hover:text-black transition duration-300 ease-in-out">
                       Donate Us</Link> */}

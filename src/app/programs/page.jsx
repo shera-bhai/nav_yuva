@@ -80,17 +80,17 @@ export default function ProgramsPage() {
     },
     {
       category: "environment",
-      title: "Green Village Initiative",
-      description: "Comprehensive program to transform villages through tree plantation, waste management systems, and renewable energy solutions.",
-      impact: "Planted 25,000+ trees and implemented waste management in 10 villages",
-      image: "/images/programs/green-village.jpg"
-    },
-    {
-      category: "environment",
       title: "Eco-Clubs in Schools",
       description: "Establishing and supporting environmental clubs in rural schools to create awareness and foster eco-friendly practices among students.",
       impact: "Active in 35 schools with over 1,500 student participants",
       image: "/images/programs/eco-clubs.jpg"
+    },
+    {
+      category: "environment",
+      title: "Swachta Abhiyan",
+      description: "Comprehensive program to transform villages through tree plantation, waste management systems, and renewable energy solutions.",
+      impact: "Planted 25,000+ trees and implemented waste management in 10 villages",
+      image: "https://ik.imagekit.io/w57hznch1e/swachta_abhiyan.jpg?updatedAt=1745922816431"
     },
     {
       category: "health",
@@ -124,11 +124,11 @@ export default function ProgramsPage() {
 
   // Impact statistics data
   const impactNumbers = [
-    { number: "50,000+", label: "Lives Impacted" },
-    { number: "75+", label: "Villages Reached" },
-    { number: "25,000+", label: "Trees Planted" },
-    { number: "5,000+", label: "Women Empowered" },
-    { number: "10,000+", label: "Children Educated" }
+    { number: "50,000+", label: "Childrens Educated" },
+    { number: "1,500+", label: "Womens Empowered" },
+    { number: "18,000+", label: "Plantations" },
+    { number: "3,000+", label: "Meals Shared" },
+    { number: "1,000+", label: "Blood Units Collected" }
   ];
 
   return (
@@ -232,7 +232,7 @@ export default function ProgramsPage() {
                 .filter(program => program.category === category.id)
                 .map((program, index) => (
                   <div key={index} className="flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
-                    <div className="flex-shrink-0 relative h-64">
+                    <div className="flex-shrink-0 relative h-80">
                       <Image
                         src={program.image}
                         alt={program.title}

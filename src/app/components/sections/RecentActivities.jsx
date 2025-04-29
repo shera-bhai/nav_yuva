@@ -9,7 +9,7 @@ export default function RecentActivities() {
       title: 'AAGAZ-E-JOSH',
       date: 'January 12, 2025',
       description: 'Organized a Sports Meet featuring multiple athletic events to encourage participation, teamwork, and physical fitness among students.',
-      image: '/recent_activities/tree-plantation.jpg',
+      image: 'https://ik.imagekit.io/w57hznch1e/IMG_3807.jpg?updatedAt=1745919052380',
     },
     {
       id: 2,
