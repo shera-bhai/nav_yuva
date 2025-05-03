@@ -1,126 +1,356 @@
 // app/programs/page.js
-
-import Image from 'next/image';
+'use client';
 import Link from 'next/link';
+import Image from 'next/image';
+import React from 'react';
+import { Accordion, AccordionHeader, AccordionBody } from "@material-tailwind/react";
 
-export const metadata = {
-  icons: {
-    icon: '/assets/navyf.png',
-    shortcut: '/assets/navyf.png',
-    apple: '/assets/navyf.png',
-  },
-  title: 'Programs | NAV Yuva Foundation',
-  description: 'Explore NAV Yuva Foundation\'s diverse programs focused on education, women empowerment, environmental conservation, health initiatives, and youth development.',
-};
+function Icon({ id, open }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className={`${id === open ? "rotate-180" : ""} h-5 w-5 transition-transform`}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+    </svg>
+  );
+}
+
+// export const metadata = {
+//   icons: {
+//     icon: '/assets/navyf.png',
+//     shortcut: '/assets/navyf.png',
+//     apple: '/assets/navyf.png',
+//   },
+//   title: 'Programs | NAV Yuva Foundation',
+//   description: 'Explore NAV Yuva Foundation\'s diverse programs focused on education, women empowerment, environmental conservation, health initiatives, and youth development.',
+// };
 
 export default function ProgramsPage() {
   // Program categories data
   const programCategories = [
     {
-      id: "education",
+      id: "education-initiative",
       title: "Education Initiatives",
       description: "Our education programs aim to provide quality learning opportunities to underserved communities, bridging the educational gap and empowering children through knowledge.",
       image: "/assets/programs/edu.jpg"
     },
     {
-      id: "women",
+      id: "women-empowerment",
       title: "Women Empowerment",
       description: "We work to empower women through skill development, financial literacy, and entrepreneurship training, helping them become self-reliant and confident contributors to society.",
       image: "/assets/programs/women.png"
     },
     {
-      id: "environment",
+      id: "environmental-conservation",
       title: "Environmental Conservation",
       description: "Our environmental programs focus on creating sustainable communities through tree plantation, waste management education, and promoting eco-friendly practices.",
       image: "/assets/programs/env.jpg"
     },
     {
-      id: "health",
+      id: "youth-development",
+      title: "Youth Development",
+      description: "Our youth programs foster leadership, critical thinking, and civic engagement through debates, youth parliaments, sports, and career counseling.",
+      image: "/assets/programs/youth.png"
+    },
+    {
+      id: "health-nutrition",
       title: "Health & Nutrition",
       description: "We organize health camps, awareness sessions, and nutrition programs to improve the overall well-being of communities with limited access to healthcare.",
       image: "/assets/programs/health.jpg"
     },
     {
-      id: "youth",
-      title: "Youth Development",
-      description: "Our youth programs foster leadership, critical thinking, and civic engagement through debates, youth parliaments, sports, and career counseling.",
-      image: "/assets/programs/youth.png"
+      id: "blood-donation",
+      title: "Blood Donation",
+      description: "We organize health camps, awareness sessions, and nutrition programs to improve the overall well-being of communities with limited access to healthcare.",
+      image: "/assets/programs/health.jpg"
     }
   ];
 
   // Featured programs data
   const featuredPrograms = [
     {
-      category: "education",
-      title: "Village Learning Centers",
-      description: "Establishing learning centers in remote villages to provide supplementary education, digital literacy, and library facilities to school-going children.",
+      category: "education-initiative",
+      title: "Mentorship Program",
+      description: "Our education programs are dedicated to empowering youth by providing them with quality learning resources and guide them in their future endeavours.",
       impact: "Currently operating in 15 villages, benefiting over 1,200 children annually",
-      image: "/images/programs/learning-center.jpg"
+      image: "/assets/programs/education_initiative/mentorship.png"
     },
     {
-      category: "education",
-      title: "Scholarship Program",
-      description: "Providing financial assistance to promising students from economically disadvantaged backgrounds to pursue higher education.",
+      category: "education-initiative",
+      title: "Career Counselling",
+      description: "Providing counselling to the underprivileged youth, helping them with their career paths with clarity and confidence through interactive school visits, workshops, and one-on-one sessions.",
       impact: "Awarded 150+ scholarships in the last academic year",
-      image: "/images/programs/scholarship.jpg"
+      image: "/assets/programs/education_initiative/career_counselling.jpg"
     },
     {
-      category: "women",
-      title: "Rural Women Entrepreneurship",
-      description: "Training rural women in entrepreneurship, connecting them with microfinance opportunities, and helping them establish small businesses.",
-      impact: "Helped establish 75+ women-led small businesses in the last 2 years",
-      image: "/images/programs/women-entrepreneurship.jpg"
-    },
-    {
-      category: "women",
-      title: "Digital Literacy for Women",
-      description: "Equipping women with basic computer skills, smartphone usage, and internet literacy to bridge the digital gender divide.",
+      category: "women-empowerment",
+      title: "Moral Empowerment",
+      description: "Fostering inner strength and informed choices by promoting well being, dignity and equality to lead safer, healthier and more confident lives.",
       impact: "Trained over 500 women across 25 villages",
-      image: "/images/programs/women-digital.jpg"
+      image: "/assets/programs/women_empowerment/moral_empowerment.jpg"
     },
     {
-      category: "environment",
-      title: "Eco-Clubs in Schools",
-      description: "Establishing and supporting environmental clubs in rural schools to create awareness and foster eco-friendly practices among students.",
+      category: "women-empowerment",
+      title: "Skill & Leadership Development",
+      description: "This program is designed to equip women- especially from rural communities - with skills, confidence and exposure they need to become capable contributors and changemakers in society.",
+      impact: "Helped establish 75+ women-led small businesses in the last 2 years",
+      image: "/assets/programs/women_empowerment/skill_development.jpg"
+    },
+    {
+      category: "environmental-conservation",
+      title: "Tree Plantations",
+      description: "Leading this green initiative as a proactive step toward climate action and ecological restoration to foster long term environmental stewardship.",
       impact: "Active in 35 schools with over 1,500 student participants",
-      image: "/images/programs/eco-clubs.jpg"
+      image: "/assets/programs/environmental_conservation/tree_plantation.jpg"
     },
     {
-      category: "environment",
-      title: "Swachta Abhiyan",
-      description: "Comprehensive program to transform villages through tree plantation, waste management systems, and renewable energy solutions.",
+      category: "environmental-conservation",
+      title: "Cleanliness Drives",
+      description: "Understanding Swacchta action programmes to promote hygiene and civic engagement to foster public awareness and encourage collective actions for healthier surroundings.",
       impact: "Planted 25,000+ trees and implemented waste management in 10 villages",
       image: "https://ik.imagekit.io/w57hznch1e/swachta_abhiyan.jpg?updatedAt=1745922816431"
     },
     {
-      category: "health",
-      title: "Mobile Health Camps",
-      description: "Organizing regular health camps in remote villages with medical professionals to provide check-ups, medicines, and health education.",
-      impact: "Conducted 45 camps last year, serving over 7,500 patients",
-      image: "/images/programs/health-camps.jpg"
+      category: "youth-development",
+      title: "Project Upliftment",
+      description: "Nurturing informed, confident and expressive young minds where youth engage in dialogues, debate and in creative competition.",
+      impact: "Engaged 2,000+ young participants across 40 schools",
+      image: "/assets/programs/youth_development/youth_parliament.jpeg"
     },
     {
-      category: "health",
+      category: "youth-development",
+      title: "Youth Sports Fest",
+      description: "Believes in the power of sports to shape character,build discipline and promote inclusivity and encouraging youth to participate actively, showcase talent and embrace teamwork.",
+      impact: "Regular programs in 30 villages benefiting 1,800+ young people",
+      image: "/assets/programs/youth_development/sports_meet.jpg"
+    },
+    {
+      category: "health-nutrition",
+      title: "Meal Assistance",
+      description: "Committed to addressing hunger in a compassionate and inclusive manner, reflecting a holistic approach to welfare that values all lives.",
+      impact: "Conducted 45 camps last year, serving over 7,500 patients",
+      image: "/assets/programs/health_nutrition/food_distribution.jpg"
+    },
+    {
+      category: "health-nutrition",
+      title: "Mobile Health Assistance",
+      description: "Delivering healthcare services and preventive awareness along with free check-ups and consultation ensuring that essential health support reaches those who need it most , right at their doorsteps.",
+      impact: "Supporting nutritional needs of 800+ children across 12 villages",
+      image: "/assets/programs/blood_donation/medical_camp.jpg"
+    },
+    {
+      category: "blood-donation",
+      title: "Rakt Veni",
+      description: "Supporting lifesaving blood donation drives and ensuring timely access to blood for those in need-promoting a culture of compassion, responsibility and collective care.",
+      impact: "Collected over 1,000 units of blood in the last year",
+      image: "/assets/programs/blood_donation/rakt_veni.jpeg"
+    },
+    {
+      category: "blood-donation",
       title: "Nutrition for Children",
       description: "Addressing malnutrition through nutrition education, supplements, and support for community kitchens in underserved areas.",
       impact: "Supporting nutritional needs of 800+ children across 12 villages",
-      image: "/images/programs/nutrition.jpg"
+      image: "/assets/programs/blood_donation/medical_camp.jpg"
     },
-    {
-      category: "youth",
-      title: "Youth Parliament Program",
-      description: "Organizing youth parliaments in rural schools and communities to develop leadership, public speaking, and democratic values.",
-      impact: "Engaged 2,000+ young participants across 40 schools",
-      image: "/images/programs/youth-parliament.jpg"
-    },
-    {
-      category: "youth",
-      title: "Sports for Development",
-      description: "Using sports as a medium to promote teamwork, discipline, and physical well-being among rural youth with limited recreational facilities.",
-      impact: "Regular programs in 30 villages benefiting 1,800+ young people",
-      image: "/images/programs/sports.jpg"
-    }
   ];
+
+  const programsData = [
+    {
+      category: "education-initiative",
+      heading: "Why Education?",
+      image: "/assets/programs/education_initiative/education_initiative.png",
+      content: "Education is the most powerful tool for breaking the cycle of poverty and inequality. For many undeserved communities, especially in rural areas, access to quality education is still a distant dream.Though our country aims to ensure free and compulsory education for children but data indicates that millions remains out of school and disparity exist in quality of education, particularly after primary school. The intense competition and high stakes examinations contribute to student stress and mental health issues. Investing in education means planting the seed for long term, systematic change as it is not just a tool- it is the root of all sustainable development.",
+      impactContent: "N.A.V Yuva Foundation asserts that education is not merely a right; it stands as the most potent instrument for transforming lives and enhancing communities. Our educational initiatives are dedicated to unlocking the potential of youth, particularly in underserved and rural regions. Through our transformative program, “Shiksha Ki Amrit Yatra,” we provide comprehensive career guidance, legal literacy, mental health awareness, and access to government schemes. Our foundation helps the underprivileged students in securing admission to state- owned universities and providing them with the right guidance and resources. By engaging with hundreds of schools and inspiring thousands of students, we are cultivating a generation that is not only academically proficient but also socially conscious, emotionally resilient, and well-prepared for the future."
+    },
+    {
+      category: "women-empowerment",
+      heading: "Why Women Empowerment?",
+      image: "/assets/programs/women_empowerment/women_empowerment.png",
+      content: "Over the years, women empowerment has become a crucial issue not due to the gender inequality but to create a more just and inclusive society. Empowering women breaks the cycle of poverty, reduces gender- based violence, and promotes equality at all levels. The women in the remote regions of our country are still not aware of their roles and rights causing their limited contribution to the society. This unequal representation disrupts the balance in society. Women empowerment should not be considered as a mere topic but a pathway towards the change in societal norms and attitudes that restrict their opportunity and rights. This also creates a positive environment for a healthy family. Ultimately, women empowerment is not only an issue concerning women- it's a process to lead the society towards a more impactful and nurturing space.",
+      impactContent: "Empowered women empower societies. At N.A.V Yuva Foundation, we believe that the advancement of women is not just a fundamental aspect of equity and social justice, but rather an essential element for the progress of entire communities and nations. Our flagship campaign, Nari Sashaktikaran Yatra, is designed to penetrate deeply into diverse communities and schools, reaching out to women and girls who may feel marginalized or unheard. Through this campaign, we actively educate women about their legal rights, the protections afforded to them under the law, and instill a sense of gender sensitivity that fosters mutual respect and understanding. By building self-confidence in participants, we aim to empower them to challenge societal norms and expectations that often restrict their potential. We employ a variety of engaging methods to facilitate learning and awareness. Our interactive sessions provide a platform for women to express their thoughts and experiences openly, leading to candid discussions that promote understanding and change. Additionally, we organize creative competitions that not only stimulate artistic expression but also encourage participants to explore themes of empowerment and resilience. Every action we take is aimed at inspiring a ripple effect of change—one voice, one village, one victory at a time."
+    },
+    {
+      category: "environmental-conservation",
+      heading: "Why Environment Protection?",
+      image: "/assets/programs/environmental_conservation/environmental_conservation.png",
+      content: "Nature is our life support system- it gives us air, water, food, and shelter. Environmental degradation pose as a threat to the ecosystem. It affects the functioning of natural processes, flora and fauna. Conservation of environment is crucial for maintaining the natural resources and ecosystems, ensuring the well- being of human and other species. It also protects  the biodiversity, reducing pollution, and promoting sustainable practices. For rural communities, conservation assures food security, clean drinking war and livelihood. A healthy environment also supports human health and reduces the risk of natural disasters like flood and droughts. Saving nature today is the best gift we can give to future generations.",
+      impactContent: "Nature is our source of life, and it is our responsibility to protect it. The Nav Yuva Foundation is committed to promoting environmental awareness through well-planned campaigns, such as “Ek Ped Maa Ke Naam.” Our activities include planting trees in schools, parks, and hospitals, as well as organizing community clean-up drives that focus on removing litter from public spaces and raising awareness about waste management.\n\nThese projects not only beautify our surroundings but also encourage young people to take care of the environment. By involving youth in these important initiatives, we aim to create a generation that values and protects nature.\n\nTogether, we are building a culture of sustainability, resilience, and respect for our planet. Our community efforts emphasize the role each individual plays in making a positive impact on the environment. Through our initiatives, including the clean-up drives that promote cleanliness and responsibility, we hope to create a cleaner and more sustainable future for the coming generations."
+    },
+    {
+      category: "youth-development",
+      heading: "Why Youth Development?",
+      image: "/assets/programs/youth_development/youth_development.png",
+      content: "Youth is the future of a nation. It is vital for society's progress, serving as a dynamic force for development. Guiding and assisting the young minds in right direction helps them and the society to create a positive impact. Youth development is essential as it instil the youth with skills, knowledge, and values needed to become responsible, productive, and engaged members of society. It involves creating opportunity for education, employment, leadership, and civic participation while also addressing the physical, emotional, and society well- being of youth. Development of youth not only benefit the individual but also the whole community and nation. Youth is the future workforce and innovators, which requires constant support and guidance during their academic phase. By supporting their development today, we are shaping a better tomorrow.",
+      impactContent: "Nav Yuva Foundation is dedicated to nurturing a generation of confident, capable, and socially aware youth. The organization's youth development initiatives focus on providing young individuals with the guidance, platforms, and experiences they need to thrive in a changing world.\n\nBy promoting career awareness, self-expression, and critical thinking, the foundation helps young minds discover their voice and purpose. Its activities emphasize personal development, civic engagement, and community leadership, fostering a culture of responsibility, creativity, and resilience.\n\nWhether in classrooms or community settings, Nav Yuva Foundation creates opportunities for youth to learn, lead, and contribute—empowering them not only to envision change but also to drive it."
+    },
+    {
+      category: "health-nutrition",
+      heading: "Why Health and Nutrition?",
+      image: "/assets/programs/health_nutrition/health_nutrition.png",
+      content: "Health and Nutrition key for the welfare of human beings animals  and society. They are necessary for living a fulfilling life, impacting physical, mental, and social well- being.  It allows individuals to build stronger relationships and contribute positivity to their communities. Eating well maintained meals provide sustained energy, improving focus, productivity, and overall quality of life. Good health and proper intake of nutrition helps in reducing level of the depression, anxiety and cognitive decline. About billion people and a vast number of animals experience food insecurity due to various factors, causing stunted growth in children and increased mortality rates. Along with humans, animals are also to be taken care of properly. Providing meals and rising awareness not only reduces the loss of life rate but also restores the faith in humanity.",
+      impactContent: "At Nav Yuva Foundation, we believe that health is the foundation of dignity, and nutrition is the first step toward lasting empowerment. Our Health & Nutrition initiatives are focused on serving not just needs but rights. Through free health camps, we reach underserved populations, providing basic medical check-ups, hygiene education, and access to professional care that would otherwise be out of reach.\n\nIn parallel, we conduct nutrition awareness sessions to help families, especially women and children, understand the importance of balanced diets, safe food practices, and preventive health. By distributing nutritious food kits to underprivileged communities, we address immediate hunger while promoting long-term wellness.\n\nThese efforts go beyond mere acts of service; they are steps toward equity. From slum settlements to rural communities, we are fostering a culture of health where every individual is informed, nourished, and valued."
+    },
+    {
+      category: "blood-donation",
+      heading: "Why Blood Donation?",
+      image: "/assets/programs/blood_donation/blood_donation.png",
+      content: "\"Your blood donation is the lifeline that keeps community strong\" - Blood donation is one of the simplest yet a powerful act of kindness a person can offer. It enables an individual to do something that is no less than a miracle- give someone a chance to live. A single unit of blood can mean survival. Blood donation is not just about donating a unit of blood but it reminds us that compassion still connect the community. It is said that one donation can help save up to three lives. It not only saves the patient's life but have positive impact on doner's body too. Regular donating is essential to keeping our healthcare system running smoothly. Therefore, be a life saver with just pint of blood.",
+      impactContent: "At N.A.V Yuva Foundation, we recognize that a single unit of donated blood can mean the difference between life and death. Through our collaborative blood donation drives with hospitals, colleges, and health institutions, we mobilize youth to become agents of compassion and public service. These drives are not just about the collection—they are platforms to educate people on the critical need for safe blood, eliminate myths, and instill a sense of civic duty.\n\nWhether these life drops are for accident victims, surgical patients, or individuals with life-threatening illnesses, our volunteers ensure that timely support reaches those who need it most. By turning compassion into a contribution, we aim to build a community where saving lives becomes a shared habit, not a heroic act."
+    },
+  ];
+
+  //Approach Data
+  const programsApproach = [
+    {
+      id: 1,
+      category: "education-initiative",
+      title: "Grassroot Connect",
+      content: "• Operates Through Student.\n• Drain Model.\n• Conduct Program On-Site.\n• Collaboration With Local Authorities.\n• One-on-One Interaction."
+    },
+    {
+      id: 2,
+      category: "education-initiative",
+      title: "Behavioural Skills",
+      content: "• Establish Literary Clubs.\n• Conducting Public Speaking Workshops.\n• Building the Spirit of Teamwork.\n• Encourage Independent Thinking."
+    },
+    {
+      id: 3,
+      category: "education-initiative",
+      title: "Education Access and Motivation",
+      content: "• Providing Study Material.\n• Organising Motivational Session.\n• Financial Assistance.\n• Use of Digital Tool.\n• Systems for Competitive Exam."
+    },
+    {
+      id: 4,
+      category: "education-initiative",
+      title: "Real World Exposure",
+      content: "• Introducing Vocational Course.\n• Pathway Planning.\n• Opportunity Awareness.\n• Empowered, Employable and Engaged Youth."
+    },
+    {
+      id: 5,
+      category: "women-empowerment",
+      title: "Civic Education",
+      content: "• Awareness Session on Hygiene.\n• Connecting with Local Health Services.\n• Encouraging Open Dialogue.\n• Promoting Conscious Living.\n• Teaching Safe v/s Unsafe Touch."
+    },
+    {
+      id: 6,
+      category: "women-empowerment",
+      title: "Growth as an Individual",
+      content: "• Voice in Public and Private Spaces.\n• Support for Creative Expression.\n• Access to Education and Literacy.\n• Shaping their own Opinions.\n• Upliftment Through Sports."
+    },
+    {
+      id: 7,
+      category: "women-empowerment",
+      title: "Independence For Self Expression",
+      content: "• Encouraging Intergenerational Dialogues.\n• Challenging Stereotypes.\n• Enhancing Communication Skill.\n• Providing Livelihood Opportunities."
+    },
+    {
+      id: 8,
+      category: "women-empowerment",
+      title: "Law & Justice Outreach",
+      content: "• Simplifying Key legal concepts.\n• Introducing Women to Support System.\n• Preventive Legal Literacy."
+    },
+    {
+      id: 9,
+      category: "environmental-conservation",
+      title: "Awareness and Education",
+      content: "• Organising Workshops for Conservation.\n• Social Media Compaigns.\n• Incorporating Environmental Education.\n• Promoting Sustainable Development Goals (SDGs)"
+    },
+    {
+      id: 10,
+      category: "environmental-conservation",
+      title: "Sustainable Use of Resources",
+      content: "• Promoting Energy Saving Habits.\n• Teaching Eco-friendly Alternatives.\n• Adopting Smart Resource Management System."
+    },
+    {
+      id: 11,
+      category: "environmental-conservation",
+      title: "Waste Management & Recycling",
+      content: "• Waste Segregation Education.\n• Anti-Plastic Compaigns.\n• Promoting 'Waste to Resource' practice.\n• Impact Tracking."
+    },
+    {
+      id: 12,
+      category: "environmental-conservation",
+      title: "Community Involvement",
+      content: "• Park Adoption Model.\n• Reducing Feedback Loops.\n• Forming Eco-Groups."
+    },
+    {
+      id: 13,
+      category: "youth-development",
+      title: "Programme Based Implementation",
+      content: "• Running focused Initiatives.\n• Using Modular Programme Templates.\n• Thematic Programmes."
+    },
+    {
+      id: 14,
+      category: "youth-development",
+      title: "Partnership & Collaborations",
+      content: "• Engaging Subject Specialists.\n• Mentor for added Credibility.\n• Partnership to Pool Resources.\n• Collaborating with Govt. Bodies."
+    },
+    {
+      id: 15,
+      category: "youth-development",
+      title: "Volunteer Driven Model",
+      content: "• Creates Tiered Volunteer Structure.\n• Orientation and Training to Volunteers."
+    },
+    {
+      id: 16,
+      category: "youth-development",
+      title: "Experiental Learning",
+      content: "• Integrates Awareness Themes into Youth led Activities.\n• Promoting Community Visibility.\n• Encourages Reflection & Discussion Session."
+    },
+    {
+      id: 17,
+      category: "health-nutrition",
+      title: "Nutrition Focused Intervention",
+      content: "• Nourishment through Local food.\n• Child and Maternal Nutrition.\n• Addressing Malnutrition and anemia."
+    },
+    {
+      id: 18,
+      category: "health-nutrition",
+      title: "Mobile Health Camps",
+      content: "• Free Check-ups and consultation.\n• Basic Medicine and Hygiene Kit.\n• On-Site Awareness during Camp."
+    },
+    {
+      id: 19,
+      category: "health-nutrition",
+      title: "Animal Support",
+      content: "• Feeding Stray Animals.\n• Promoting Humane Care."
+    },
+    {
+      id: 20,
+      category: "health-nutrition",
+      title: "Assessment",
+      content: "• Conducting Surveys and Field visits.\n• Engaging Local Stakeholders."
+    },
+    {
+      id: 21,
+      category: "blood-donation",
+      title: "Safe and Ethical Practices",
+      content: "• Ensuring Proper Hygiene.\n• Medical Supervision.\n• Post-Donate Care."
+    },
+    {
+      id: 22,
+      category: "blood-donation",
+      title: "Emergency Response Coordination",
+      content: "• Quick Response to Urgent Blood Request.\n• Real time network of Active Donors."
+    },
+    {
+      id: 23,
+      category: "blood-donation",
+      title: "Blood Donation",
+      content: "• Organising Certified Donation Camps.\n• Credibility and safety.\n• Support of Medical Staff."
+    },
+    {
+      id: 24,
+      category: "blood-donation",
+      title: "Blood Donation",
+      content: "• Encouraging Regular Donors.\n• Group Donation Events.\n• Group Volunteering and Donation Events.\n• Word-of-Mouth Motivation."
+    },
+  ]
 
   // Impact statistics data
   const impactNumbers = [
@@ -131,16 +361,20 @@ export default function ProgramsPage() {
     { number: "1,000+", label: "Blood Units Collected" }
   ];
 
+  const [open, setOpen] = React.useState(0);
+
+  const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-primary">
+      <div className="relative bg-black">
         <div className="absolute inset-0">
           <Image
-            src="/images/programs/programs-hero.jpg"
+            src="/assets/programs/program.jpg"
             alt="NAV Yuva Foundation Programs"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-70"
             priority
           />
         </div>
@@ -148,28 +382,28 @@ export default function ProgramsPage() {
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Our Programs
           </h1>
-          <p className="mt-6 text-xl text-white max-w-3xl mx-auto">
+          <p className="mt-6 text-xl opacity-80 text-white max-w-3xl mx-auto">
             Empowering communities through sustainable development initiatives focused on education, women empowerment, environmental conservation, health, and youth development.
           </p>
         </div>
-      </div>
-
-      {/* Impact Numbers Section */}
-      <div className="bg-primary-dark py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
-            {impactNumbers.map((item, index) => (
-              <div key={index} className="text-center">
-                <p className="text-3xl md:text-4xl font-extrabold text-white">{item.number}</p>
-                <p className="mt-2 text-base text-primary-light">{item.label}</p>
-              </div>
-            ))}
+        <div className="relative bg-transparent py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+              {impactNumbers.map((item, index) => (
+                <div key={index} className="text-center">
+                  <p className="text-3xl md:text-4xl font-extrabold text-white">{item.number}</p>
+                  <p className="mt-2 text-base font-normal text-white">{item.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
+      {/* Impact Numbers Section */}
+
       {/* Program Categories Section */}
-      <div className="py-16 bg-white">
+      {/* <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -201,22 +435,23 @@ export default function ProgramsPage() {
                     <p className="mt-3 text-lg text-gray-500">
                       {category.description}
                     </p>
-                    {/* <div className="mt-8">
+                    <div className="mt-8">
                       <a href={`#${category.id}-programs`} className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-black hover:bg-primary-dark">
                         View Programs
                       </a>
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Featured Programs Section */}
+
       {programCategories.map((category) => (
-        <div key={category.id} id={`${category.id}-programs`} className="py-16 bg-gray-50">
+        <div key={category.id} id={`${category.id}-programs`} className="py-12 odd:bg-gray-100 even:bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -250,21 +485,85 @@ export default function ProgramsPage() {
                           </p>
                         </div>
                       </div>
-                      <div className="mt-6">
+                      {/* <div className="mt-6">
                         <Link href={`/programs/${category.id}/${program.title.toLowerCase().replace(/\s+/g, '-')}`} className="text-base font-medium text-primary hover:text-primary-dark">
                           Learn more about this program →
                         </Link>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 ))}
             </div>
           </div>
+
+      {/* Why Section */}
+        
+          <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
+          {programsData
+            .filter(data => data.category === category.id)
+            .map((data, index) => (
+              <div key={index} className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-0'>
+                <div className='mt-4 text-4xl uppercase font-semibold text-gray-900'>
+                  {data.heading}
+                </div>
+                <p className='py-4 text-xl text-gray-600 text-justify md:min-w-[1215px]'>
+                  {data.content}
+                </p>
+              </div>
+            ))}
+          </div>
+
+      {/* Our Impact Section */}
+
+          <div className='max-w-auto bg-cyan-400 mx-auto py-12 px-4 sm:px-6 lg:px-8'>
+          {programsData
+            .filter(data => data.category === category.id)
+            .map((data, index) => (
+            <div key={index} className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+                <div className='mt-4 text-4xl uppercase font-semibold text-gray-900'>
+                  Our Impact in Action
+                </div>
+                <p className='py-4 text-xl text-gray-600 text-justify md:min-w-[1215px] whitespace-pre-line'>
+                  {data.impactContent}
+                </p>
+                <Image
+                  src={data.image}
+                  alt="NAV Yuva Foundation Programs"
+                  width={1340}
+                  height={340}
+                  className='hidden pt-10 md:block'
+                />
+            </div>
+            ))}
+          </div>
+
+      {/* Our Approach */}
+
+          <div className='max-w-7xl py-12 mx-auto px-4 sm:px-6 lg:px-8'>
+            <p className="text-4xl uppercase font-semibold text-gray-900 mx-auto pb-6">
+              Operational Model
+            </p>
+            <div className='md:min-w-[1215px] md:grid md:grid-cols-2 md:gap-x-8'>
+              {programsApproach
+                .filter(approach => approach.category === category.id)
+                .map((approach, index) => (
+                <Accordion key={index} open={open === approach.id} icon={<Icon id={approach.id} open={open} />}>
+                  <AccordionHeader className='text-2xl' onClick={() => handleOpen(approach.id)}>{approach.title}</AccordionHeader>
+                  <AccordionBody>
+                    <p className='whitespace-pre-line text-xl'>
+                      {approach.content}
+                    </p>
+                  </AccordionBody>
+                </Accordion>
+              ))}
+            </div>
+          </div>
         </div>
       ))}
-
+      
       {/* Approach Section */}
-      <div className="py-16 bg-white">
+
+      {/* <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
             <div>
@@ -349,7 +648,7 @@ export default function ProgramsPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Success Stories Preview */}
       <div className="bg-gray-50 py-16">
@@ -364,24 +663,24 @@ export default function ProgramsPage() {
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3 sm:grid-cols-2">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-48">
+              <div className="relative h-60">
                 <Image
-                  src="/images/stories/story1.jpg"
+                  src="/assets/programs/success_stories/dakshita.jpg"
                   alt="Success story"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900">From School Dropout to Teacher</h3>
+                <h3 className="text-lg font-semibold text-gray-900">From N.A.V Yuva Chhatra Sansad to the Indian Parliament</h3>
                 <p className="mt-2 text-sm text-gray-500">
-                  How Meena from Rajgarh village overcame obstacles to become an educator in her community.
+                  "I sincerely thank the N.A.V Yuva Foundation for giving me the opportunity to participate in the Yuva Sansad. It has been a wonderful experience for me. Yuva Sansad has given a new direction and platform to the talents of youth. I am truly grateful to the N.A.V Yuva Foundation for this inspiring initiative."
                 </p>
-                <div className="mt-4">
+                {/* <div className="mt-4">
                   <Link href="/impact-stories/meena" className="text-primary hover:text-primary-dark font-medium">
                     Read her story →
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -427,11 +726,11 @@ export default function ProgramsPage() {
               </div>
             </div>
           </div>
-          <div className="mt-10 text-center">
+          {/* <div className="mt-10 text-center">
             <Link href="/impact-stories" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-dark">
               View All Success Stories
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -23,9 +23,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Organization Info */}
           <div>
-            <h2 className="text-lg font-bold mb-4">NAV Yuva Foundation</h2>
+            <h2 className="text-lg font-bold mb-4">N.A.V Yuva Foundation</h2>
             <p className="text-gray-300 mb-4">
-              Empowering women through education, skills development, and advocacy since 2010.
+              Empowering Youth through education, action and community change since 2022. //Change
             </p>
             <div className="flex space-x-4">
               <a href="https://x.com/N_A_V_Yuva" target='_blank' className="text-gray-300 hover:text-cyan-500" aria-label="Twitter">

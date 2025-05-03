@@ -1,9 +1,9 @@
 // app/layout.js
-import { ReactNode } from 'react';
+'use client';
+import { ReactNode, useEffect } from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/ui/Navbar';
-// import { log } from 'console';
 import Footer from './components/ui/Footer';
 
 const inter = Inter({ subsets: ['latin'] });

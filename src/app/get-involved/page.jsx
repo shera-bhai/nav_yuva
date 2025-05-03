@@ -21,7 +21,7 @@ export default function GetInvolvedPage() {
       commitment: "4-8 hours per week",
       location: "Various village schools and community centers",
       skills: ["Teaching", "Patience", "Creativity"],
-      image: "/images/volunteer/education.jpg"
+      image: "/assets/get_involved/volunteer/education.png"
     },
     {
       title: "Women Empowerment Program Facilitator",
@@ -29,7 +29,7 @@ export default function GetInvolvedPage() {
       commitment: "8-12 hours per month",
       location: "Community centers across multiple villages",
       skills: ["Communication", "Leadership", "Empathy"],
-      image: "/images/volunteer/women-empowerment.jpg"
+      image: "/assets/get_involved/volunteer/women.png"
     },
     {
       title: "Environmental Initiative Volunteer",
@@ -37,7 +37,7 @@ export default function GetInvolvedPage() {
       commitment: "Weekend events and seasonal campaigns",
       location: "Various rural and semi-urban locations",
       skills: ["Physical fitness", "Environmental knowledge", "Teamwork"],
-      image: "/images/volunteer/environment.jpg"
+      image: "/assets/get_involved/volunteer/environment.png"
     },
     {
       title: "Health Camp Assistant",
@@ -131,13 +131,14 @@ export default function GetInvolvedPage() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-primary">
-        <div className="absolute inset-0">
+      <div className="relative">
+        <div className='relative bg-black cursor-default'>
+        <div className="h-24 md:h-14">
           <Image
-            src="/images/get-involved-hero.jpg"
+            src="/assets/get_involved/get_involved.jpg"
             alt="Get Involved with NAV Yuva Foundation"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-70"
             priority
           />
         </div>
@@ -161,6 +162,7 @@ export default function GetInvolvedPage() {
           </div>
         </div>
       </div>
+      </div>
 
       {/* Volunteer Section */}
       <div id="volunteer" className="py-16 bg-white">
@@ -176,12 +178,12 @@ export default function GetInvolvedPage() {
           <div className="mt-12 grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             {volunteerOpportunities.map((opportunity, index) => (
               <a href='/get-involved/volunteer' key={index} className="flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
-                <div className="flex-shrink-0 relative h-48">
+                <div className="flex-shrink-0 relative h-80">
                   <Image
                     src={opportunity.image}
                     alt={opportunity.title}
                     fill
-                    className="object-cover"
+                    className="object-fill"
                   />
                 </div>
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -204,7 +206,7 @@ export default function GetInvolvedPage() {
                     </div>
                   </div>
                   <div className="mt-6">
-                    <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md  bg-primary hover:bg-primary-dark">
+                    <button className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md  bg-cyan-300 hover:bg-cyan-500 hover:text-white transition-all duration-300 ease-in-out">
                       Apply Now
                     </button>
                   </div>

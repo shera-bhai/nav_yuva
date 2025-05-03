@@ -12,7 +12,7 @@ export default function ImpactStatistics() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Our Impact
+            Our Reach So Far
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
             Real change happens when communities come together. Here's how NAV Yuva Foundation is making a difference.
@@ -24,7 +24,7 @@ export default function ImpactStatistics() {
             {stats.map((item) => (
               <div
                 key={item.id}
-                className="group bg-white overflow-hidden shadow rounded-lg px-4 py-5 sm:p-6 text-center even:bg-[#23c5ca] transition duration-300 ease-in-out"
+                className="group bg-white overflow-hidden shadow rounded-lg px-4 py-5 sm:p-6 text-center even:bg-primary transition duration-300 ease-in-out"
               >
                 <dt className="text-sm font-medium  truncate group-hover:text-black transition duration-300 ease-in-out">{item.label}</dt>
                 <dd className="mt-1 text-4xl font-extrabold text-primary">{item.stat}</dd>

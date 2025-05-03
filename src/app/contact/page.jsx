@@ -59,13 +59,14 @@ export default function ContactPage() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-primary">
-        <div className="absolute inset-0">
+      <div className="relative">
+      <div className='relative bg-black cursor-default'>
+        <div className="h-24 md:h-44">
           <Image
-            src="/images/contact-hero.jpg"
+            src="/assets/contact/contact.jpg"
             alt="Contact NAV Yuva Foundation"
             fill
-            className="object-cover opacity-30"
+            className="object-cover object-top opacity-70"
             priority
           />
         </div>
@@ -78,6 +79,7 @@ export default function ContactPage() {
           </p>
         </div>
       </div>
+    </div>
 
       {/* Contact Information and Form Section */}
       <div className="py-16 bg-white">

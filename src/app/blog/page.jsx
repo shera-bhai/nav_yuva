@@ -8,7 +8,7 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'Blog | NAV Yuva Foundation',
+  title: 'Blogs | NAV Yuva Foundation',
   description: 'Latest articles, success stories, and updates from our women empowerment initiatives.',
 };
 
@@ -42,6 +42,27 @@ export default function Blog() {
   ];
   
   return (
+    <div className="relative">
+      <div className='relative bg-black cursor-default'>
+        <div className="h-24 md:h-44">
+          <Image
+            src="/assets/blogs/blogs2.jpg"
+            alt="Contact NAV Yuva Foundation"
+            fill
+            className="object-cover object-center opacity-70"
+            priority
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Blogs
+          </h1>
+          <p className="mt-6 text-xl text-white max-w-3xl mx-auto">
+            Reach out to us to learn more about our initiatives or how you can contribute to our mission.
+          </p>
+        </div>
+      </div>
+
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">
         Blog & News
@@ -82,7 +103,8 @@ export default function Blog() {
               </div>
             </div>
           </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

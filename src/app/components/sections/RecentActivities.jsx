@@ -28,7 +28,7 @@ export default function RecentActivities() {
   ];
 
   return (
-    <div className="bg-gray-50 py-16">
+    <div className="bg-cyan-200 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -63,14 +63,14 @@ export default function RecentActivities() {
           ))}
         </div>
         
-        <div className="mt-10 text-center">
+        {/* <div className="mt-10 text-center">
           <Link
             href="/programs#education-programs"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-black bg-white hover:bg-[#23c5ca] transition duration-300 ease-in-out"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-black bg-white hover:bg-primary transition duration-300 ease-in-out"
           >
             View All Activities
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
