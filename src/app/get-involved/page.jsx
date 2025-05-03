@@ -40,20 +40,20 @@ export default function GetInvolvedPage() {
       image: "/assets/get_involved/volunteer/environment.png"
     },
     {
-      title: "Health Camp Assistant",
-      description: "Support medical professionals during health camps by managing registrations, guiding patients, and distributing medicines.",
-      commitment: "Quarterly health camps (full-day events)",
-      location: "Remote villages with limited healthcare access",
-      skills: ["Organization", "Compassion", "Basic health knowledge"],
-      image: "/images/volunteer/health.jpg"
-    },
-    {
       title: "Digital Content Creator",
       description: "Create engaging content for social media, website, and promotional materials to raise awareness about our initiatives.",
       commitment: "Flexible, can be done remotely",
       location: "Remote work with occasional field visits",
       skills: ["Writing", "Design", "Social media management"],
-      image: "/images/volunteer/content.jpg"
+      image: "/assets/get_involved/volunteer/content_creator.png"
+    },
+    {
+      title: "Meal Distribution Volunteer",
+      description: "Support medical professionals during health camps by managing registrations, guiding patients, and distributing medicines.",
+      commitment: "Quarterly health camps (full-day events)",
+      location: "Remote villages with limited healthcare access",
+      skills: ["Organization", "Compassion", "Basic health knowledge"],
+      image: "/assets/get_involved/volunteer/meal_distribution.png"
     },
     {
       title: "Youth Program Coordinator",

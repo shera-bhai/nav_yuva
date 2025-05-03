@@ -372,7 +372,7 @@ export default function ProgramsPage() {
         <div className="absolute inset-0">
           <Image
             src="/assets/programs/program.jpg"
-            alt="NAV Yuva Foundation Programs"
+            alt="N.A.V Yuva Foundation Programs"
             fill
             className="object-cover opacity-70"
             priority
@@ -523,12 +523,12 @@ export default function ProgramsPage() {
                 <div className='mt-4 text-4xl uppercase font-semibold text-gray-900'>
                   Our Impact in Action
                 </div>
-                <p className='py-4 text-xl text-gray-600 text-justify md:min-w-[1215px] whitespace-pre-line'>
+                <p className='py-4 text-xl text-gray-600 text-justify md:min-w-[1215px] md:max-w-[1215px] whitespace-pre-line'>
                   {data.impactContent}
                 </p>
                 <Image
                   src={data.image}
-                  alt="NAV Yuva Foundation Programs"
+                  alt="N.A.V Yuva Foundation Programs"
                   width={1340}
                   height={340}
                   className='hidden pt-10 md:block'

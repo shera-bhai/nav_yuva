@@ -66,7 +66,7 @@ export default function ContactPage() {
             src="/assets/contact/contact.jpg"
             alt="Contact NAV Yuva Foundation"
             fill
-            className="object-cover object-top opacity-70"
+            className="object-cover opacity-70"
             priority
           />
         </div>
