@@ -61,7 +61,7 @@ export default function GetInvolvedPage() {
       commitment: "8-16 hours per month",
       location: "Schools, community centers, and sports grounds",
       skills: ["Youth engagement", "Event management", "Mentorship"],
-      image: "/images/volunteer/youth.jpg"
+      image: "/assets/get_involved/volunteer/youth.png"
     }
   ];
 
