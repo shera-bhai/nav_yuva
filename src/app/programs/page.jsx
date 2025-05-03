@@ -77,21 +77,21 @@ export default function ProgramsPage() {
       category: "education-initiative",
       title: "Mentorship Program",
       description: "Our education programs are dedicated to empowering youth by providing them with quality learning resources and guide them in their future endeavours.",
-      impact: "Currently operating in 15 villages, benefiting over 1,200 children annually",
+      impact: "Our Mentorship Program currently operates in 150+ villages, empowering over 75,000+ children annually with quality education and guidance for their future endeavors.",
       image: "/assets/programs/education_initiative/mentorship.png"
     },
     {
       category: "education-initiative",
       title: "Career Counselling",
       description: "Providing counselling to the underprivileged youth, helping them with their career paths with clarity and confidence through interactive school visits, workshops, and one-on-one sessions.",
-      impact: "Awarded 150+ scholarships in the last academic year",
+      impact: "In the last academic year, our Career Counselling program guided 30,000+ underprivileged youth, with 70% reporting increased clarity and confidence in their career paths.",
       image: "/assets/programs/education_initiative/career_counselling.jpg"
     },
     {
       category: "women-empowerment",
       title: "Moral Empowerment",
       description: "Fostering inner strength and informed choices by promoting well being, dignity and equality to lead safer, healthier and more confident lives.",
-      impact: "Trained over 500 women across 25 villages",
+      impact: "Our Moral Empowerment program has educated over 1000+ women across 25 villages, fostering well-being, dignity, and equality for safer and healthier lives.",
       image: "/assets/programs/women_empowerment/moral_empowerment.jpg"
     },
     {
@@ -502,7 +502,7 @@ export default function ProgramsPage() {
           {programsData
             .filter(data => data.category === category.id)
             .map((data, index) => (
-              <div key={index} className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-0'>
+              <div key={index} className='max-w-7xl mx-auto'>
                 <div className='mt-4 text-4xl uppercase font-semibold text-gray-900'>
                   {data.heading}
                 </div>
@@ -515,11 +515,11 @@ export default function ProgramsPage() {
 
       {/* Our Impact Section */}
 
-          <div className='max-w-auto bg-cyan-400 mx-auto py-12 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-auto bg-cyan-200 mx-auto py-12 px-4 sm:px-6 lg:px-8'>
           {programsData
             .filter(data => data.category === category.id)
             .map((data, index) => (
-            <div key={index} className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div key={index} className='max-w-7xl mx-auto sm:px-6 lg:px-8'>
                 <div className='mt-4 text-4xl uppercase font-semibold text-gray-900'>
                   Our Impact in Action
                 </div>
@@ -531,7 +531,7 @@ export default function ProgramsPage() {
                   alt="N.A.V Yuva Foundation Programs"
                   width={1340}
                   height={340}
-                  className='hidden pt-10 md:block'
+                  className='hidden mt-10 md:block'
                 />
             </div>
             ))}
@@ -651,7 +651,7 @@ export default function ProgramsPage() {
       </div> */}
 
       {/* Success Stories Preview */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -661,9 +661,9 @@ export default function ProgramsPage() {
               Real stories of transformation and impact from our program beneficiaries.
             </p>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-3 sm:grid-cols-2">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 sm:grid-cols-2">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-60">
+              <div className="relative h-80">
                 <Image
                   src="/assets/programs/success_stories/dakshita.jpg"
                   alt="Success story"
@@ -672,8 +672,8 @@ export default function ProgramsPage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900">From N.A.V Yuva Chhatra Sansad to the Indian Parliament</h3>
-                <p className="mt-2 text-sm text-gray-500">
+                <h3 className="text-lg md:text-3xl font-semibold text-gray-900">From N.A.V Yuva Chhatra Sansad to the Indian Parliament</h3>
+                <p className="mt-2 text-sm md:text-base text-gray-500">
                   "I sincerely thank the N.A.V Yuva Foundation for giving me the opportunity to participate in the Yuva Sansad. It has been a wonderful experience for me. Yuva Sansad has given a new direction and platform to the talents of youth. I am truly grateful to the N.A.V Yuva Foundation for this inspiring initiative."
                 </p>
                 {/* <div className="mt-4">
@@ -684,27 +684,27 @@ export default function ProgramsPage() {
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-48">
+              <div className="relative h-80">
                 <Image
-                  src="/images/stories/story2.jpg"
+                  src="/assets/programs/success_stories/dakshita.jpg"
                   alt="Success story"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900">The Green Village Transformation</h3>
-                <p className="mt-2 text-sm text-gray-500">
-                  How Sundarpur village became a model for environmental sustainability and community action.
+                <h3 className="text-lg md:text-3xl font-semibold text-gray-900">From N.A.V Yuva Chhatra Sansad to the Indian Parliament</h3>
+                <p className="mt-2 text-sm md:text-base text-gray-500">
+                "I sincerely thank the N.A.V Yuva Foundation for giving me the opportunity to participate in the Yuva Sansad. It has been a wonderful experience for me. Yuva Sansad has given a new direction and platform to the talents of youth. I am truly grateful to the N.A.V Yuva Foundation for this inspiring initiative."
                 </p>
-                <div className="mt-4">
+                {/* <div className="mt-4">
                   <Link href="/impact-stories/sundarpur" className="text-primary hover:text-primary-dark font-medium">
                     Read the story →
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            {/* <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-48">
                 <Image
                   src="/images/stories/story3.jpg"
@@ -724,7 +724,7 @@ export default function ProgramsPage() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           {/* <div className="mt-10 text-center">
             <Link href="/impact-stories" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-dark">
@@ -742,10 +742,10 @@ export default function ProgramsPage() {
             <span className="block text-primary-light">Join us in creating positive change.</span>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 gap-4 flex-wrap">
-            <Link href="/get-involved/volunteer" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50">
+            <Link href="/get-involved/volunteer" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:text-[#23c5ca] mb-4 sm:mb-0 transition duration-300 ease-in-out">
               Volunteer With Us
             </Link>
-            <Link href="https://rzp.io/rzp/cGixej34" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-dark hover:bg-primary-darker">
+            <Link href="https://rzp.io/rzp/cGixej34" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white hover:text-black transition duration-300 ease-in-out">
               Support Our Programs
             </Link>
           </div>

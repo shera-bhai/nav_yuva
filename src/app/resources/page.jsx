@@ -210,7 +210,7 @@ export default function ResourcesPage() {
               <a 
                 key={index} 
                 href={`#${category.id}`} 
-                className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50"
+                className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-100"
               >
                 {category.title}
               </a>
@@ -264,7 +264,7 @@ export default function ResourcesPage() {
         <div 
           key={categoryIndex} 
           id={category.id} 
-          className={`py-16 ${categoryIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+          className={`py-16 ${categoryIndex % 2 === 0 ? 'bg-white' : 'bg-gray-100'}`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -331,7 +331,7 @@ export default function ResourcesPage() {
             </p>
           </div>
           
-          <div className="mt-12 bg-gray-50 rounded-lg overflow-hidden shadow-lg">
+          <div className="mt-12 bg-gray-100 rounded-lg overflow-hidden shadow-lg">
             <div className="md:flex">
               <div className="md:flex-shrink-0 relative md:w-1/3 h-64 md:h-auto">
                 <Image
@@ -403,7 +403,7 @@ export default function ResourcesPage() {
       </div>
 
       {/* Feedback Section */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -464,7 +464,7 @@ export default function ResourcesPage() {
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 space-x-4">
             <Link 
               href="/get-involved" 
-              className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50"
+              className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-100"
             >
               Get Involved
             </Link>

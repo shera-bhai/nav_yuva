@@ -73,7 +73,7 @@ export default function GetInvolvedPage() {
     },
     {
       title: "Educational Institution Collaborations",
-      description: "Schools, colleges, and universities can engage in partnerships for service projects, internship opportunities, and awareness drives.",
+      description: "Schools, colleges, and universities can engage in partnerships for service projects, internship opportunities, mentorship programs and awareness drives.",
       icon: "academic"
     },
     {
@@ -92,24 +92,24 @@ export default function GetInvolvedPage() {
     {
       title: "Non-Recurring Donation",
       description: "Contribute a one-time donation of any amount to support the continuation of our programs and initiatives.",
-      buttonText: "Donate Now"
+      buttonText: "Donate Now  →"
     },
     {
       title: "Recurring Donation",
       description: "Join us as a regular donor with a monthly contribution to offer ongoing support for our long-term initiatives.",
-      buttonText: "Start Monthly Giving"
+      buttonText: "Start Monthly Giving  →"
     },
     {
       title: "Support a Child's Education",
       description: "Sponsor a child's educational expenses for a year, covering books, supplies, and tuition for a child from an underserved community.",
       amount: "₹12,000 per year",
-      buttonText: "Sponsor a Child"
+      buttonText: "Sponsor a Child  →"
     },
     {
       title: "Sponsor a Community Program",
       description: "Contribute to funding of an entire community program, including meal distribution, skill development workshops, or environmental initiatives.",
       amount: "Starting at ₹25,000",
-      buttonText: "Sponsor a Program"
+      buttonText: "Sponsor a Program  →"
     }
   ];
 
@@ -133,7 +133,7 @@ export default function GetInvolvedPage() {
       {/* Hero Section */}
       <div className="relative">
         <div className='relative bg-black cursor-default'>
-        <div className="h-24 md:h-14">
+        <div className="h-36 md:h-14">
           <Image
             src="/assets/get_involved/get_involved.jpg"
             alt="Get Involved with N.A.V Yuva Foundation"
@@ -149,14 +149,14 @@ export default function GetInvolvedPage() {
           <p className="mt-6 text-xl text-white max-w-3xl mx-auto">
             Become a part of N.A.V Yuva to contribute meaningfully towards empowering communities, fostering development, and driving sustainable social change from Volunteering your time to forming partnerships and making donations.
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="#volunteer" className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50">
+          <div className="hidden mt-10 md:flex flex-wrap justify-center gap-4">
+            <a href="#volunteer" className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-[#23c5ca] hover:text-white transition-all duration-300 ease-in-out">
               Volunteer
             </a>
-            <a href="#partner" className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-dark hover:bg-primary-darker">
+            <a href="#partner" className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white hover:text-black transition-all duration-300 ease-in-out">
               Partner With Us
             </a>
-            <a href="#donate" className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50">
+            <a href="#donate" className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-[#23c5ca] hover:text-white transition-all duration-300 ease-in-out">
               Donate
             </a>
           </div>
@@ -265,10 +265,10 @@ export default function GetInvolvedPage() {
                     <p className="text-base text-gray-500">{partnership.description}</p>
                   </div>
                 </div>
-                <div className="bg-gray-50 px-6 py-3">
+                <div className="bg-gray-100 px-6 py-3">
                   <div className="text-sm">
-                    <Link href="mailto:contact@navyuva.org" className="font-medium">
-                      Discuss partnership opportunities →
+                    <Link href="mailto:contact@navyuva.org" className="font-medium hover:text-cyan-500 transition-all duration-300 ease-in-out">
+                      Discuss partnership opportunities  →
                     </Link>
                   </div>
                 </div>
@@ -306,7 +306,7 @@ export default function GetInvolvedPage() {
                 </div>
                 <div className="bg-gray-100 px-6 py-3">
                   <div className="text-sm">
-                    <Link href="https://rzp.io/rzp/cGixej34" className="font-medium hover:text-cyan-500 transition-all duration-300 ease-in-out">
+                    <Link href="https://rzp.io/rzp/cGixej34" target='_blank' className="font-medium hover:text-cyan-500 transition-all duration-300 ease-in-out">
                       {option.buttonText}
                     </Link>
                   </div>
@@ -314,16 +314,16 @@ export default function GetInvolvedPage() {
               </div>
             ))}
           </div>
-          <div className="mt-12 bg-gray-50 rounded-lg overflow-hidden shadow">
-            <div className="px-6 py-8 sm:p-10">
+          <div className="mt-12 bg-gray-100 rounded-lg overflow-hidden shadow">
+            <div className="px-6 pt-8 sm:p-10">
               <div className="text-center">
-                <h3 className="text-2xl font-semibold text-gray-900">Corporate Social Responsibility</h3>
-                <p className="mt-4 text-lg text-gray-500">
+                <h3 className="text-4xl font-bold text-gray-900">Corporate Social Responsibility</h3>
+                <p className="mt-8 text-lg text-gray-500 text-justify">
                 We partner with businesses to create tailored CSR programs that align with corporate values and deliver measurable community impact. Our team provides end-to-end support in crafting customized programs that deliver measurable, lasting impact.
                 </p>
               </div>
               <div className="mt-8 text-center">
-                <Link href="/contact" className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-dark">
+                <Link href="/contact" className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md shadow-xl bg-white hover:text-white hover:bg-cyan-500 transition-all duration-300 ease-in-out">
                   Discuss CSR Opportunities
                 </Link>
               </div>
@@ -333,7 +333,7 @@ export default function GetInvolvedPage() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -345,13 +345,13 @@ export default function GetInvolvedPage() {
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-2 md:grid-cols-1">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div key={index} className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-default">
                 <div className="p-8">
                   <div className="relative">
                     <svg className="absolute top-0 left-0 transform -translate-x-6 -translate-y-8 h-16 w-16 text-primary-light opacity-30" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
                       <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                     </svg>
-                    <p className="relative text-lg font-medium text-gray-700">
+                    <p className="relative left-15 max-w-5/6 md:max-w-10/12 text-justify text-lg font-medium text-gray-700">
                       {testimonial.quote}
                     </p>
                   </div>
@@ -386,12 +386,12 @@ export default function GetInvolvedPage() {
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
-              <Link href="/get-involved/volunteer" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50">
+              <Link href="/get-involved/volunteer" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:text-[#23c5ca] mb-4 sm:mb-0 transition duration-300 ease-in-out">
                 Become a Volunteer
               </Link>
             </div>
-            <div className="ml-3 inline-flex rounded-md shadow">
-              <Link href="/get-involved/donate" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-dark hover:bg-primary-darker">
+            <div className="ml-3 inline-flex rounded-md">
+              <Link href="/get-involved/donate" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white hover:text-black transition duration-300 ease-in-out">
                 Donate Now
               </Link>
             </div>

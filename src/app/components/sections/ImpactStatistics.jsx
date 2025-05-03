@@ -8,7 +8,7 @@ export default function ImpactStatistics() {
   ];
 
   return (
-    <div className="bg-gray-50 py-16 cursor-default">
+    <div className="bg-gray-100 py-16 cursor-default">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -24,7 +24,7 @@ export default function ImpactStatistics() {
             {stats.map((item) => (
               <div
                 key={item.id}
-                className="group bg-white overflow-hidden shadow rounded-lg px-4 py-5 sm:p-6 text-center even:bg-primary transition duration-300 ease-in-out"
+                className="group bg-white overflow-hidden shadow rounded-lg px-4 py-5 sm:p-6 text-center even:bg-[#23c5caa5] transition duration-300 ease-in-out"
               >
                 <dt className="text-sm font-medium  truncate group-hover:text-black transition duration-300 ease-in-out">{item.label}</dt>
                 <dd className="mt-1 text-4xl font-extrabold text-primary">{item.stat}</dd>

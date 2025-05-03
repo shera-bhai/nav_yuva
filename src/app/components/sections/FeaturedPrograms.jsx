@@ -93,7 +93,7 @@
 //         {/* <div className="mt-10 text-center">
 //           <Link
 //             href="/programs"
-//             className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-black bg-gray-50 hover:bg-primary transition duration-500 ease-in-out"
+//             className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-black bg-gray-100 hover:bg-primary transition duration-500 ease-in-out"
 //           >
 //             View All Programs
 //           </Link>
@@ -166,7 +166,7 @@ export default function FeaturedPrograms() {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 3000); // change every 5 seconds
+    }, 5000); // change every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -177,7 +177,7 @@ export default function FeaturedPrograms() {
   }
 
   return (
-    <div className="bg-white py-16 cursor-default relative">
+    <div className="bg-white py-16 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -190,7 +190,7 @@ export default function FeaturedPrograms() {
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4 transition-all duration-700">
           {visiblePrograms.map((program) => (
-            <div key={program.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform duration-300 shadow-sm hover:transform hover:scale-105 hover:shadow-[#23c5ca]">
+            <a href={program.link} key={program.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl">
               <div className="flex-shrink-0 relative h-56">
                 <Image
                   src={program.image}
@@ -204,16 +204,16 @@ export default function FeaturedPrograms() {
                   <h3 className="text-xl font-semibold text-gray-900">{program.title}</h3>
                   <p className="mt-3 text-base text-gray-500">{program.description}</p>
                 </div>
-                <div className="mt-6">
+                {/* <div className="mt-6">
                   <Link
                     href={program.link}
                     className="text-primary hover:text-primary-dark font-medium"
                   >
                     Learn more →
                   </Link>
-                </div>
+                </div> */}
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

@@ -59,9 +59,21 @@ export default function Footer() {
               <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
             </ul>
           </div>
+
+          {/* Policy Links */}
+          <div>
+            <h2 className="text-lg font-bold mb-4">Policy</h2>
+            <ul className="space-y-2">
+              <li><Link href="https://drive.google.com/file/d/1ej3gRr4UaO-AaatPcnlEYNDDhGm2xT4-/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
+              <li><Link href="https://drive.google.com/file/d/1CTer4725zuRS6wN955KQPwvFnBO8BJPn/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Donation Policy</Link></li>
+              <li><Link href="https://drive.google.com/file/d/1iG8drncZ2SWAVy_bV1Ad9v1nvLYgKv9l/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Shipping Policy</Link></li>
+              <li><Link href="https://drive.google.com/file/d/18Vb5ep4uFzZQd634b8Jvme4neQxw3vNP/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Terms & Conditions</Link></li>
+              <li><Link href="https://drive.google.com/file/d/1hi_8S1z2KeWGq7Dmh5qbuXubUAyJIt0U/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Cancellation & Refund Policy</Link></li>
+            </ul>
+          </div>
           
           {/* Contact Information */}
-          <div>
+          {/* <div>
             <h2 className="text-lg font-bold mb-4">Contact Us</h2>
             <address className="not-italic text-gray-300 space-y-2">
               <p className='flex gap-2'>
@@ -86,7 +98,7 @@ export default function Footer() {
                 <a href="mailto:contact@navyuva.org" className="hover:text-white">contact@navyuva.org</a>
               </p>
             </address>
-          </div>
+          </div> */}
           
           {/* Newsletter Signup */}
           <div>

@@ -61,9 +61,9 @@ export default function ContactPage() {
       {/* Hero Section */}
       <div className="relative">
       <div className='relative bg-black cursor-default'>
-        <div className="h-24 md:h-44">
+        <div className="h-64 md:h-44">
           <Image
-            src="/assets/contact/contact.jpg"
+            src="/assets/contact/4.jpg"
             alt="Contact | N.A.V Yuva Foundation"
             fill
             className="object-cover opacity-70"
@@ -86,7 +86,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div className="bg-gray-50 rounded-xl p-8 shadow-lg">
+            <div className="bg-gray-100 rounded-xl p-8 shadow-lg">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
               
               <div className="space-y-6">
@@ -159,7 +159,7 @@ export default function ContactPage() {
       </div>
       
       {/* Map Section */}
-      <div className="py-16 bg-gray-50">
+      <div className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">

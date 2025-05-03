@@ -47,7 +47,7 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <div className="bg-gray-50 py-16">
+    <div className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -59,7 +59,7 @@ export default function TestimonialSlider() {
         </div>
         
         <div className="mt-12 max-w-3xl mx-auto relative">
-          <div className="overflow-hidden rounded-lg bg-white shadow-lg">
+          <div className="overflow-hidden rounded-lg bg-white shadow-xl">
             <div className="px-6 py-8 sm:px-10 sm:py-12">
               <div className="flex flex-col items-center text-center">
                 <div className="relative h-40 w-40 border-2 border-cyan-300 shadow-lg rounded-full overflow-hidden mb-6">

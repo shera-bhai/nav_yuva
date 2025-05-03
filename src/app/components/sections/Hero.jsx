@@ -10,7 +10,7 @@ export default function Hero() {
           src="/assets/home.jpg"
           fill
           alt="N.A.V Yuva Foundation community work"
-          className="object-cover opacity-70"
+          className="object-cover object-center opacity-70"
           priority
         />
       </div>
@@ -24,13 +24,13 @@ export default function Hero() {
         <div className="hidden mt-10 md:flex flex-col sm:flex-row gap-4">
           <Link
             href="/get-involved"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-black bg-white hover:text-[#23c5ca] transition duration-300 ease-in-out"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-black bg-white hover:bg-[#23c5ca] hover:text-white transition duration-300 ease-in-out"
           >
             Get Involved
           </Link>
           <Link 
             href="/programs"
-            className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-transparent hover:text-[#23c5ca] transition duration-300 ease-in-out"
+            className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-transparent hover:text-black transition duration-300 ease-in-out"
           >
             Our Programs
           </Link>

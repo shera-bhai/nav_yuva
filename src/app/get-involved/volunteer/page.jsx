@@ -249,7 +249,7 @@ export default function VolunteerRegistrationPage() {
   // If form submission was successful, show success view
   if (submitSuccess) {
     return (
-      <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div className="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="py-8 px-4 sm:px-10 text-center">
             <div className="mx-auto h-24 w-24 relative mb-4">
@@ -282,7 +282,7 @@ export default function VolunteerRegistrationPage() {
                 Thank you for your interest in volunteering with N.A.V Yuva Foundation. Our team will review your application and contact you within 3-5 business days to discuss the next steps in the volunteer onboarding process.
               </p>
               
-              <div className="bg-gray-50 p-4 rounded-lg mb-6">
+              <div className="bg-gray-100 p-4 rounded-lg mb-6">
                 <h4 className="font-medium text-gray-900 mb-2">What Happens Next?</h4>
                 <ol className="list-decimal text-left pl-5 text-gray-600 space-y-2">
                   <li>Our volunteer coordinator will review your application</li>
@@ -296,7 +296,7 @@ export default function VolunteerRegistrationPage() {
                 <Link href="/" className="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
                   Return to Homepage
                 </Link>
-                <Link href="/get-involved" className="inline-flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                <Link href="/get-involved" className="inline-flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
                   Explore Other Ways to Help
                 </Link>
               </div>
