@@ -8,7 +8,7 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'About Us | NAV Yuva Foundation',
+  title: 'About Us | N.A.V Yuva Foundation',
   description: 'Learn about our mission, vision, values, and the team behind our women empowerment initiatives.',
 };
 
@@ -68,7 +68,7 @@ export default function AboutPage() {
     <div className='cursor-default'>
       {/* Hero Section */}
       <div className="relative bg-black cursor-default">
-        <div className="h-48 md:h-44">
+        <div className="h-64 md:h-44">
           <Image 
             src="/assets/about/about.jpg" 
             alt="Our team working in the community" 

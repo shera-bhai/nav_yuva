@@ -9,8 +9,8 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'Contact Us | NAV Yuva Foundation',
-  description: 'Reach out to NAV Yuva Foundation for partnerships, volunteer opportunities, or to learn more about our community development initiatives.',
+  title: 'Contact Us | N.A.V Yuva Foundation',
+  description: 'Reach out to N.A.V Yuva Foundation for partnerships, volunteer opportunities, or to learn more about our community development initiatives.',
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
     {
       icon: "location",
       title: "Our Location",
-      content: "NAV Yuva Foundation Headquarters\nBuilding No. 315, Village Karontha,\nJhajjar Road - Rohtak,\nHaryana - 124001",
+      content: "N.A.V Yuva Foundation Headquarters\nBuilding No. 315, Village Karontha,\nJhajjar Road - Rohtak,\nHaryana - 124001",
     },
     {
       icon: "email",
@@ -39,19 +39,19 @@ export default function ContactPage() {
 
   const faqItems = [
     {
-      question: "How can I volunteer with NAV Yuva Foundation?",
+      question: "How can I volunteer with N.A.V Yuva Foundation?",
       answer: "You can volunteer by filling out our volunteer form on the Get Involved page, or by contacting us directly at contact@navyuva.org. We have various volunteering opportunities based on your skills, interests, and availability."
     },
     {
-      question: "Does NAV Yuva Foundation accept donations?",
+      question: "Does N.A.V Yuva Foundation accept donations?",
       answer: "Yes, we accept donations in various forms including monetary contributions, educational materials, clothing, and food items. All donations are used to support our community development programs. Visit our Donate page to learn more."
     },
     {
-      question: "How can schools or colleges partner with NAV Yuva Foundation?",
+      question: "How can schools or colleges partner with N.A.V Yuva Foundation?",
       answer: "Educational institutions can partner with us for joint community service initiatives, awareness programs, or to provide internship opportunities for students. Please contact us at contact@navyuva.org to discuss collaboration possibilities."
     },
     {
-      question: "Does NAV Yuva Foundation issue certificates for volunteers?",
+      question: "Does N.A.V Yuva Foundation issue certificates for volunteers?",
       answer: "Yes, we provide certificates of participation and recognition for volunteers who contribute to our programs. These certificates detail the nature of contribution and hours of service, which can be valuable for academic and professional portfolios."
     }
   ];
@@ -64,7 +64,7 @@ export default function ContactPage() {
         <div className="h-24 md:h-44">
           <Image
             src="/assets/contact/contact.jpg"
-            alt="Contact NAV Yuva Foundation"
+            alt="Contact | N.A.V Yuva Foundation"
             fill
             className="object-cover opacity-70"
             priority

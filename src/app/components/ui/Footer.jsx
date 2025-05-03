@@ -25,7 +25,7 @@ export default function Footer() {
           <div>
             <h2 className="text-lg font-bold mb-4">N.A.V Yuva Foundation</h2>
             <p className="text-gray-300 mb-4">
-              Empowering Youth through education, action and community change since 2022. //Change
+              Works for the prosperity of disadvantaged through education, awareness and sustainable approach since 2022.
             </p>
             <div className="flex space-x-4">
               <a href="https://x.com/N_A_V_Yuva" target='_blank' className="text-gray-300 hover:text-cyan-500" aria-label="Twitter">

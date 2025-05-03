@@ -15,15 +15,15 @@ export default function TestimonialSlider() {
     {
       id: 2,
       quote: "N.A.V Yuva Foundation works with a selfless spirit and complete dedication for the welfare of the society, is truly commendable. I feel immense happiness seeing such dedicated youth contributing in nurturing the space. My best wishes and support have always been with the foundation.",
-      name: "Abhishek Sangwan",
+      name: "Ashish Sangwan",
       role: "District Youth Officer",
       image: "/assets/testimonials/abhishek_sangwan.png"
     },
     {
       id: 3,
-      quote: "N.A.V Yuva Foundation works with a selfless spirit and complete dedication for the welfare of the society, is truly commendable. I feel immense happiness seeing such dedicated youth contributing in nurturing the space. My best wishes and support have always been with the foundation.",
-      name: "Abhishek Sangwan",
-      role: "District Youth Officer",
+      quote: "N.A.V Yuva Foundation, in collaboration with Amar Ujala as its knowledge partner, has successfully organized the National Nav Yuva Chatra Sansad. They adopted a unique approach to inspire young people to stand against drug abuse through dialogue. This organization has consistently works for the upliftment of youth. Best wishes to them for a bright future.",
+      name: "Yogesh Narayan Dikshit",
+      role: "Editor - AMAR UJALA",
       image: "/assets/testimonials/yogesh_narayan.png"
     },
   ];

@@ -15,7 +15,7 @@ export default function ImpactStatistics() {
             Our Reach So Far
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            Real change happens when communities come together. Here's how NAV Yuva Foundation is making a difference.
+            Real change happens when communities come together. Here's how N.A.V Yuva Foundation is making a difference.
           </p>
         </div>
         

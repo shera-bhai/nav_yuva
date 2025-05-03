@@ -159,9 +159,9 @@ export default function Navbar() {
             <Link href="/get-involved" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium">Get Involved</Link>
             {/* <Link href="/resources" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium">Resources</Link> */}
             <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
-            <Link href="https://rzp.io/rzp/EdBQayel" target='_blank' onClick={() => setIsMenuOpen(false)}
-                  className="block px-3 py-2 w- text-base font-medium bg-primary hover:bg-[#1aa3a3] hover:text-black transition duration-300 ease-in-out">
-                  Donate Us</Link>
+            <Link href="https://rzp.io/rzp/cGixej34" target='_blank' onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-2 w- text-base font-medium bg-primary hover:bg-[#1aa3a3] hover:text-black transition duration-300 ease-in-out">
+              Donate Us</Link>
           </div>
         </div>
       )}

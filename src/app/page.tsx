@@ -12,7 +12,7 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'NAV Yuva Foundation - Empowering Communities, Transforming Lives',
+  title: 'N.A.V Yuva Foundation - Empowering Communities, Transforming Lives',
   description: 'A non-profit organization dedicated to uplifting the needy and poor through education, women empowerment, environmental initiatives, and youth development.',
 };
 

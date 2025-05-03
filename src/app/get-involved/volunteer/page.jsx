@@ -6,8 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // export const metadata = {e
-//   title: 'Volunteer Registration | NAV Yuva Foundation',
-//   description: 'Join NAV Yuva Foundation as a volunteer and contribute to community development, education, women empowerment, and environmental initiatives.',
+//   title: 'Volunteer Registration | N.A.V Yuva Foundation',
+//   description: 'Join N.A.V Yuva Foundation as a volunteer and contribute to community development, education, women empowerment, and environmental initiatives.',
 // };
 
 export default function VolunteerRegistrationPage() {
@@ -59,7 +59,7 @@ export default function VolunteerRegistrationPage() {
     'Health Camps',
     'Digital Content Creation',
     'Youth Development',
-    'Career Counseling',
+    'Career Counselling',
     'Sports Activities',
     'Food Donations',
     'Youth Parliament',
@@ -69,7 +69,7 @@ export default function VolunteerRegistrationPage() {
   // Skills options
   const skillOptions = [
     'Teaching',
-    'Counseling',
+    'Counselling',
     'Event Management',
     'Content Writing',
     'Photography/Videography',
@@ -251,13 +251,14 @@ export default function VolunteerRegistrationPage() {
     return (
       <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="bg-primary py-8 px-4 sm:px-10 text-center">
+          <div className="py-8 px-4 sm:px-10 text-center">
             <div className="mx-auto h-24 w-24 relative mb-4">
               <Image
-                src="/images/logo.png"
-                alt="NAV Yuva Foundation Logo"
+                src="/assets/logo.jpg"
+                alt="N.A.V Yuva Foundation Logo"
                 fill
-                className="object-contain"
+                className="object-cover"
+                priority
               />
             </div>
             <h2 className="text-2xl font-bold text-white">
@@ -278,7 +279,7 @@ export default function VolunteerRegistrationPage() {
               </h3>
               
               <p className="text-gray-600 mb-6">
-                Thank you for your interest in volunteering with NAV Yuva Foundation. Our team will review your application and contact you within 3-5 business days to discuss the next steps in the volunteer onboarding process.
+                Thank you for your interest in volunteering with N.A.V Yuva Foundation. Our team will review your application and contact you within 3-5 business days to discuss the next steps in the volunteer onboarding process.
               </p>
               
               <div className="bg-gray-50 p-4 rounded-lg mb-6">
@@ -310,13 +311,13 @@ export default function VolunteerRegistrationPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative bg-primary">
-        <div className="absolute inset-0">
+      <div className="relative bg-black">
+        <div className="">
           <Image
-            src="/images/volunteer-hero.jpg"
-            alt="Volunteer with NAV Yuva Foundation"
+            src="/assets/vol.jpg"
+            alt="Volunteer with N.A.V Yuva Foundation"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-70"
             priority
           />
         </div>
@@ -767,7 +768,7 @@ export default function VolunteerRegistrationPage() {
               
               <div className="mt-6">
                 <label htmlFor="motivation" className="block text-sm font-medium text-gray-700">
-                  Why do you want to volunteer with NAV Yuva Foundation? *
+                  Why do you want to volunteer with N.A.V Yuva Foundation? *
                 </label>
                 <div className="mt-1">
                   <textarea

@@ -9,8 +9,8 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'Impact Stories | NAV Yuva Foundation',
-  description: 'Read inspiring stories of transformation and change from NAV Yuva Foundation\'s community development initiatives across rural India.',
+  title: 'Impact Stories | N.A.V Yuva Foundation',
+  description: 'Read inspiring stories of transformation and change from N.A.V Yuva Foundation\'s community development initiatives across rural India.',
 };
 
 export default function ImpactStoriesPage() {
@@ -28,7 +28,7 @@ export default function ImpactStoriesPage() {
       id: 2,
       title: "Transforming Livelihoods Through Skill Development",
       category: "Women Empowerment",
-      excerpt: "How a group of 25 women from Chandpur village established a successful handicraft business with support from NAV Yuva Foundation.",
+      excerpt: "How a group of 25 women from Chandpur village established a successful handicraft business with support from N.A.V Yuva Foundation.",
       image: "/images/stories/women-empowerment.jpg",
       date: "January 10, 2023",
       location: "Chandpur Village, Rajasthan"
@@ -103,7 +103,7 @@ export default function ImpactStoriesPage() {
 
   const testimonials = [
     {
-      quote: "The NAV Yuva Foundation's education program changed my life. I never thought I would be able to continue my studies, but they supported me through everything. Today, I am the first graduate from my village.",
+      quote: "The N.A.V Yuva Foundation's education program changed my life. I never thought I would be able to continue my studies, but they supported me through everything. Today, I am the first graduate from my village.",
       author: "Priya Sharma",
       role: "Education Program Beneficiary",
       image: "/images/testimonials/priya.jpg"
@@ -115,7 +115,7 @@ export default function ImpactStoriesPage() {
       image: "/images/testimonials/lakshmi.jpg"
     },
     {
-      quote: "Working with NAV Yuva Foundation on the tree plantation drive has transformed our village's environment. We're seeing better air quality and even some wildlife returning to the area.",
+      quote: "Working with N.A.V Yuva Foundation on the tree plantation drive has transformed our village's environment. We're seeing better air quality and even some wildlife returning to the area.",
       author: "Ramesh Kumar",
       role: "Environmental Program Volunteer",
       image: "/images/testimonials/ramesh.jpg"
@@ -129,7 +129,7 @@ export default function ImpactStoriesPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/impact-hero.jpg"
-            alt="NAV Yuva Foundation Impact Stories"
+            alt="N.A.V Yuva Foundation Impact Stories"
             fill
             className="object-cover opacity-30"
             priority
@@ -207,7 +207,7 @@ export default function ImpactStoriesPage() {
               More Impact Stories
             </h2>
             <p className="mt-4 text-lg text-gray-500 max-w-3xl mx-auto">
-              Explore the diverse ways NAV Yuva Foundation is creating positive change across communities.
+              Explore the diverse ways N.A.V Yuva Foundation is creating positive change across communities.
             </p>
           </div>
 

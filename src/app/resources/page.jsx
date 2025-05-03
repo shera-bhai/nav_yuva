@@ -9,7 +9,7 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'Resources | NAV Yuva Foundation',
+  title: 'Resources | N.A.V Yuva Foundation',
   description: 'Access educational materials, women empowerment guides, environmental resources, youth development tools, and more. Empowering communities through knowledge and support.',
 };
 
@@ -190,7 +190,7 @@ export default function ResourcesPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/resources-hero.jpg"
-            alt="NAV Yuva Foundation Resources"
+            alt="N.A.V Yuva Foundation Resources"
             fill
             className="object-cover opacity-30"
             priority
@@ -227,7 +227,7 @@ export default function ResourcesPage() {
               Empowering Communities Through Knowledge
             </h2>
             <p className="mt-4 text-lg text-gray-500 max-w-3xl mx-auto">
-              NAV Yuva Foundation is committed to providing free, accessible resources that empower individuals and communities. Our materials are designed to be practical, culturally relevant, and easy to implement in rural and underserved settings.
+              N.A.V Yuva Foundation is committed to providing free, accessible resources that empower individuals and communities. Our materials are designed to be practical, culturally relevant, and easy to implement in rural and underserved settings.
             </p>
           </div>
           
@@ -336,7 +336,7 @@ export default function ResourcesPage() {
               <div className="md:flex-shrink-0 relative md:w-1/3 h-64 md:h-auto">
                 <Image
                   src="/images/resources/workshop.jpg"
-                  alt="NAV Yuva Foundation Workshop"
+                  alt="N.A.V Yuva Foundation Workshop"
                   fill
                   className="object-cover"
                 />

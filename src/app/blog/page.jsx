@@ -8,7 +8,7 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'Blogs | NAV Yuva Foundation',
+  title: 'Blogs | N.A.V Yuva Foundation',
   description: 'Latest articles, success stories, and updates from our women empowerment initiatives.',
 };
 
@@ -46,8 +46,8 @@ export default function Blog() {
       <div className='relative bg-black cursor-default'>
         <div className="h-24 md:h-44">
           <Image
-            src="/assets/blogs/blogs2.jpg"
-            alt="Contact NAV Yuva Foundation"
+            src="/assets/blogs/blogs.jpg"
+            alt="Blogs | N.A.V Yuva Foundation"
             fill
             className="object-cover object-center opacity-70"
             priority

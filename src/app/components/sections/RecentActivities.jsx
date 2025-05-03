@@ -13,7 +13,7 @@ export default function RecentActivities() {
     },
     {
       id: 2,
-      title: 'NAV YUVA CHHATRA SANSAD',
+      title: 'N.A.V YUVA CHHATRA SANSAD',
       date: 'March 22, 2025',
       description: 'Organized a Youth parliament for 200+ students to foster leadership and democratic values.',
       image: 'https://ik.imagekit.io/w57hznch1e/chhatra_sansad.jpg?updatedAt=1745841418397',

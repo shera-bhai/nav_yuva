@@ -32,7 +32,7 @@ const ContactForm = () => {
   };
 
     return (
-        <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+        <div id='contact_form' className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
