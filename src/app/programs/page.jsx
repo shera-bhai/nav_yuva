@@ -35,7 +35,7 @@ export default function ProgramsPage() {
   const programCategories = [
     {
       id: "education-initiative",
-      title: "Education Initiatives",
+      title: "Education Initiative",
       description: "Our education programs aim to provide quality learning opportunities to underserved communities, bridging the educational gap and empowering children through knowledge.",
       image: "/assets/programs/edu.jpg"
     },
@@ -76,8 +76,8 @@ export default function ProgramsPage() {
     {
       category: "education-initiative",
       title: "Mentorship Program",
-      description: "Our education programs are dedicated to empowering youth by providing them with quality learning resources and guide them in their future endeavours.",
-      impact: "Our Mentorship Program currently operates in 150+ villages, empowering over 75,000+ children annually with quality education and guidance for their future endeavors.",
+      description: "Our education programs are dedicated to empower youth by providing them with quality learning resources and guide them in their future endeavours.",
+      impact: "Our program currently operates in 150+ villages, empowering over 75,000+ children annually with quality education and guidance for their future endeavors.",
       image: "/assets/programs/education_initiative/mentorship.png"
     },
     {
@@ -354,8 +354,8 @@ export default function ProgramsPage() {
 
   // Impact statistics data
   const impactNumbers = [
-    { number: "50,000+", label: "Childrens Educated" },
-    { number: "1,500+", label: "Womens Empowered" },
+    { number: "1,00,000+", label: "Children Educated" },
+    { number: "1,500+", label: "Women Empowered" },
     { number: "18,000+", label: "Plantations" },
     { number: "3,000+", label: "Meals Shared" },
     { number: "1,000+", label: "Blood Units Collected" }
@@ -458,7 +458,7 @@ export default function ProgramsPage() {
                 {category.title} Programs
               </h2>
               <p className="mt-4 text-lg text-gray-500 max-w-3xl mx-auto">
-                Explore our initiatives focused on {category.title.toLowerCase()}.
+                Explore our programs focused on {category.title.toLowerCase()}.
               </p>
             </div>
 
@@ -506,7 +506,7 @@ export default function ProgramsPage() {
                 <div className='mt-4 text-4xl uppercase font-semibold text-gray-900'>
                   {data.heading}
                 </div>
-                <p className='py-4 text-xl text-gray-600 text-justify md:min-w-[1215px]'>
+                <p className='py-4 text-xl text-gray-600 text-justify md:min-w-[1015px]'>
                   {data.content}
                 </p>
               </div>
@@ -519,11 +519,11 @@ export default function ProgramsPage() {
           {programsData
             .filter(data => data.category === category.id)
             .map((data, index) => (
-            <div key={index} className='max-w-7xl mx-auto sm:px-6 lg:px-8'>
+            <div key={index} className='max-w-7xl mx-auto xl:px-8'>
                 <div className='mt-4 text-4xl uppercase font-semibold text-gray-900'>
                   Our Impact in Action
                 </div>
-                <p className='py-4 text-xl text-gray-600 text-justify md:min-w-[1215px] md:max-w-[1215px] whitespace-pre-line'>
+                <p className='py-4 text-xl text-gray-600 text-justify md:min-w-[1015px] whitespace-pre-line'>
                   {data.impactContent}
                 </p>
                 <Image
@@ -543,7 +543,7 @@ export default function ProgramsPage() {
             <p className="text-4xl uppercase font-semibold text-gray-900 mx-auto pb-6">
               Operational Model
             </p>
-            <div className='md:min-w-[1215px] md:grid md:grid-cols-2 md:gap-x-8'>
+            <div className='md:min-w-[1015px] md:grid md:grid-cols-2 md:gap-x-8'>
               {programsApproach
                 .filter(approach => approach.category === category.id)
                 .map((approach, index) => (

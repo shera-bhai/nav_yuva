@@ -8,14 +8,14 @@ export default function RecentActivities() {
       id: 1,
       title: 'AAGAZ-E-JOSH',
       date: 'January 12, 2025',
-      description: 'Organized a Sports Meet featuring multiple athletic events to encourage participation, teamwork, and physical fitness among students.',
+      description: 'Organized a sports meet featuring multiple athletic events to encourage participation, teamwork, and physical fitness among students.',
       image: 'https://ik.imagekit.io/w57hznch1e/IMG_3807.jpg?updatedAt=1745919052380',
     },
     {
       id: 2,
       title: 'N.A.V YUVA CHHATRA SANSAD',
       date: 'March 22, 2025',
-      description: 'Organized a Youth parliament for 200+ students to foster leadership and democratic values.',
+      description: 'Organized a youth parliament for 200+ students to foster leadership and democratic values.',
       image: 'https://ik.imagekit.io/w57hznch1e/chhatra_sansad.jpg?updatedAt=1745841418397',
     },
     {
@@ -41,7 +41,7 @@ export default function RecentActivities() {
         
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {activities.map((activity) => (
-            <div key={activity.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div key={activity.id} data-aos="fade-up" data-aos-anchor-placement="center-bottom" className="flex flex-col rounded-lg shadow-lg overflow-hidden">
               <div className="flex-shrink-0 relative h-80">
                 <Image
                   src={activity.image}

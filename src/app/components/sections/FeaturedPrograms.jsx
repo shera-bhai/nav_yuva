@@ -190,7 +190,7 @@ export default function FeaturedPrograms() {
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4 transition-all duration-700">
           {visiblePrograms.map((program) => (
-            <a href={program.link} key={program.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl">
+            <a href={program.link} key={program.id} data-aos="fade-up" data-aos-anchor-placement="center-bottom" className="flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl">
               <div className="flex-shrink-0 relative h-56">
                 <Image
                   src={program.image}

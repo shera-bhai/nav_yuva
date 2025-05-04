@@ -108,36 +108,36 @@ export default function Footer() {
             </p>
             {subscribed ? (
               <div className="p-4 bg-green-100 text-green-800 rounded-md">
-                Thank you for subscribing!
+                Thank You for Subscribing!
               </div>
             ) : (
-<form onSubmit={handleSubmit} className="relative w-full max-w-md">
-  <div className="relative">
-    <input
-      type="email"
-      placeholder="Your email"
-      className="w-full pl-4 pr-12 py-3 rounded-md text-gray-900 bg-white focus:ring-2 focus:ring-primary border border-gray-300"
-      required
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      aria-label="Email for newsletter"
-    />
-    <button
-      type="submit"
-      className="absolute right-2 top-1/2 transform -translate-y-1/2 text-primary hover:text-primary-dark focus:outline-none"
-      aria-label="Subscribe"
-    >
-      <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 24 24" 
-        fill="currentColor" 
-        className="w-6 h-6 text-black"
-      >
-        <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
-      </svg>
-    </button>
-  </div>
-</form>
+              <form onSubmit={handleSubmit} className="relative w-full max-w-md">
+                <div className="relative">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    className="w-full pl-4 pr-12 py-3 rounded-md text-gray-900 bg-white focus:ring-2 focus:ring-primary border border-gray-300"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    aria-label="Email for newsletter"
+                  />
+                  <button
+                    type="submit"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-primary hover:text-primary-dark focus:outline-none"
+                    aria-label="Subscribe"
+                  >
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      viewBox="0 0 24 24" 
+                      fill="currentColor" 
+                      className="w-6 h-6 text-black"
+                    >
+                      <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
+                    </svg>
+                  </button>
+                </div>
+              </form>
             )}
           </div>
         </div>

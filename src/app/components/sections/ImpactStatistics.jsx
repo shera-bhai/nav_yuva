@@ -20,7 +20,7 @@ export default function ImpactStatistics() {
         </div>
         
         <div className="mt-10">
-          <dl className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="200">
             {stats.map((item) => (
               <div
                 key={item.id}

@@ -54,11 +54,11 @@ export default function TestimonialSlider() {
             Voices of Influence
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            Hear from our Esteemed Dignitaires.
+            Hear from our Esteemed Dignitaries.
           </p>
         </div>
         
-        <div className="mt-12 max-w-3xl mx-auto relative">
+        <div className="mt-12 max-w-3xl mx-auto relative" data-aos="zoom-in-down" data-aos-anchor-placement="center-bottom">
           <div className="overflow-hidden rounded-lg bg-white shadow-xl">
             <div className="px-6 py-8 sm:px-10 sm:py-12">
               <div className="flex flex-col items-center text-center">

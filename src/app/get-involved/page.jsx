@@ -177,7 +177,7 @@ export default function GetInvolvedPage() {
           </div>
           <div className="mt-12 grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             {volunteerOpportunities.map((opportunity, index) => (
-              <div key={index} className="flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
+              <div key={index} data-aos="fade-up" data-aos-anchor-placement="center-bottom" className="flex flex-col rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
                 <div className="flex-shrink-0 relative h-80">
                   <Image
                     src={opportunity.image}
@@ -206,9 +206,9 @@ export default function GetInvolvedPage() {
                     </div>
                   </div>
                   <div className="mt-6">
-                    <button className="w-full cursor-pointer flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md  bg-cyan-300 hover:bg-cyan-500 hover:text-white transition-all duration-300 ease-in-out">
+                    <Link href="/get-involved/volunteer" target='_blank' className="w-full cursor-pointer active:text-white active:bg-cyan-500 flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md  bg-cyan-300 hover:bg-cyan-500 hover:text-white transition-all duration-300 ease-in-out">
                       Apply Now
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

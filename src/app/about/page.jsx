@@ -95,7 +95,7 @@ export default function AboutPage() {
               Our Story
             </h2>
           </div>
-          <div className="mt-10 text-lg text-gray-500 max-w-3xl mx-auto text-justify">
+          <div className="mt-10 text-lg text-gray-500 max-w-3xl mx-auto text-justify" data-aos="fade" data-aos-anchor-placement="center-bottom">
             <p className="mb-4">
             N.A.V Yuva Foundation was established on 31st October 2022 by Praveen Kumar with a vision: to reshape the future of our youth. Our primary mission is to catalyze the holistic development of an individual, equipping them with the skills and opportunities to thrive through diverse activities and events. 
             </p>
@@ -114,7 +114,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Mission */}
-            <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-default">
+            <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-default" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
               <div className="relative h-80">
                 <Image
                   src="/assets/about/mission.jpg"
@@ -132,7 +132,7 @@ export default function AboutPage() {
             </div>
 
             {/* Vision */}
-            <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-default">
+            <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-default" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
               <div className="relative h-80">
                 <Image
                   src="/assets/about/vision.jpg"
@@ -160,7 +160,7 @@ export default function AboutPage() {
               Our Values
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom" data-aos-delay="200">
             <div className="bg-white rounded-xl p-6 text-center shadow-xl">
               <div className="text-primary text-5xl mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto"  stroke="currentColor" viewBox="0 0 384 512">
@@ -225,14 +225,14 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="relative mt-10 flex flex-col gap-y-6">
-            <div className='max-w-3xl mx-auto px-2 md:px-0 text-justify text-lg text-gray-500'>
+            <div className='max-w-3xl mx-auto px-2 md:px-0 text-justify text-lg text-gray-500' data-aos="fade" data-aos-anchor-placement="bottom-bottom">
               <p>
                 N.A.V Yuva Foundation has established a strong and growing presence more than across 12 States, with active initiatives in both rural and urban regions, building strong grassroots connections. Through consistent community engagement, strategic collaborations, inclusive programs, it has touched lives of thousands. The foundation's visible footprints reflects its commitment to Sustainable Development and transformative change at every level of society.
               </p>
             </div>
-            <div className='flex justify-center items-center'>
+            <div className='flex justify-center items-center' data-aos="fade" data-aos-anchor-placement="center-bottom">
               <Image
-                src="/assets/reach2.png"
+                src="/assets/reach.png"
                 alt='Our Reach and Presence'
                 width={720}
                 height={1080}
@@ -258,7 +258,7 @@ export default function AboutPage() {
           </div>
           <div className="relative mt-10">
             <div className='md:flex justify-center items-center gap-x-20 mx-auto px-2 md:px-0 text-justify text-lg text-gray-500'>
-              <div className='mx-auto mb-6'>
+              <div className='mx-auto mb-6' data-aos="fade" data-aos-anchor-placement="bottom-bottom">
                 <Image
                   src="/assets/about/unccd.png"
                   alt='Accreditation'
@@ -268,14 +268,14 @@ export default function AboutPage() {
                   className='object-contain'
                 />
               </div>
-              <p>
+              <p data-aos="fade" data-aos-anchor-placement="bottom-bottom" data-aos-delay="500">
                 N.A.V Yuva Foundation is proud to announce its official accreditation with the United Nations Convention to Combat Desertification (UNCCD), which represents a leading global authority on land and its sustainable management. This accreditation underscores our commitment to addressing environmental degradation and promoting sustainable practices. It reinforces our mission to foster balance within the ecosystem through initiating more environmental campaigns and encouraging the society to contribute to the same.
               </p>
             </div>
           </div>
           <div className="relative mt-10">
             <div className='md:flex justify-center items-center gap-x-20 mx-auto px-2 md:px-0 text-justify text-lg text-gray-500'>
-              <div className='mx-auto mb-6'>
+              <div className='mx-auto mb-6' data-aos="fade" data-aos-anchor-placement="bottom-bottom" data-aos-delay="500">
                 <Image
                   src="/assets/about/ydc.png"
                   alt='Accreditation'
@@ -285,7 +285,7 @@ export default function AboutPage() {
                   className='object-contain'
                 />
               </div>
-              <p>
+              <p data-aos="fade" data-aos-anchor-placement="bottom-bottom" data-aos-delay="500">
                 We are pleased to announce that our organization has been officially accredited as a member of the Youth Democracy Cohort (YDC). This esteemed recognition underscores our commitment to empowering the voices of young individuals and promoting democratic values. As an accredited member, we are dedicated to fostering civic engagement, enhancing inclusivity, and providing a platform for youth to influence their communities and societies. This achievement reinforces our determination to advocate for constructive change and to create opportunities for young people to engage actively in the democratic process.
               </p>
             </div>

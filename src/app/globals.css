@@ -29,3 +29,10 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@media (max-width: 768px) and (max-width: 1024px) {
+  [data-aos^="fade-right"], [data-aos^="fade-left"] {
+    transform: translate3d(0, 0, 0) !important;
+    margin: 0 !important;
+  }
+}

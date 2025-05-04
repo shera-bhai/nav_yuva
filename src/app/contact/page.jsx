@@ -63,7 +63,7 @@ export default function ContactPage() {
       <div className='relative bg-black cursor-default'>
         <div className="h-64 md:h-44">
           <Image
-            src="/assets/contact/4.jpg"
+            src="/assets/contact/contact.jpg"
             alt="Contact | N.A.V Yuva Foundation"
             fill
             className="object-cover opacity-70"

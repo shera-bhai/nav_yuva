@@ -168,45 +168,45 @@ export default function VolunteerRegistrationPage() {
   const validateForm = () => {
     const errors = {};
     
-    // Required fields validation
-    if (!formData.firstName.trim()) errors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) errors.lastName = 'Last name is required';
-    if (!formData.email.trim()) errors.email = 'Email is required';
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = 'Email is invalid';
-    if (!formData.phone.trim()) errors.phone = 'Phone number is required';
-    if (!formData.address.trim()) errors.address = 'Address is required';
-    if (!formData.city.trim()) errors.city = 'City is required';
-    if (!formData.state.trim()) errors.state = 'State is required';
-    if (!formData.pincode.trim()) errors.pincode = 'PIN Code is required';
-    else if (!/^\d{6}$/.test(formData.pincode)) errors.pincode = 'PIN Code must be 6 digits';
-    if (!formData.occupation.trim()) errors.occupation = 'Occupation is required';
-    if (!formData.education.trim()) errors.education = 'Education is required';
+  //   // Required fields validation
+    // if (!formData.firstName.trim()) errors.firstName = 'First name is required';
+    // if (!formData.lastName.trim()) errors.lastName = 'Last name is required';
+    // if (!formData.email.trim()) errors.email = 'Email is required';
+    // else if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = 'Email is invalid';
+    // if (!formData.phone.trim()) errors.phone = 'Phone number is required';
+    // if (!formData.address.trim()) errors.address = 'Address is required';
+    // if (!formData.city.trim()) errors.city = 'City is required';
+    // if (!formData.state.trim()) errors.state = 'State is required';
+    // if (!formData.pincode.trim()) errors.pincode = 'PIN Code is required';
+    // else if (!/^\d{6}$/.test(formData.pincode)) errors.pincode = 'PIN Code must be 6 digits';
+    // if (!formData.occupation.trim()) errors.occupation = 'Occupation is required';
+    // if (!formData.education.trim()) errors.education = 'Education is required';
     
-    // Validate interests selection
-    if (formData.interests.length === 0) errors.interests = 'Please select at least one area of interest';
+    // // Validate interests selection
+    // if (formData.interests.length === 0) errors.interests = 'Please select at least one area of interest';
 
-    if (formData.skills.length === 0) errors.skills = 'Please select at least one skill';
+    // if (formData.skills.length === 0) errors.skills = 'Please select at least one skill';
 
-    if (formData.skills.includes('Other') && !formData.otherSkills.trim()) {
-      errors.otherSkills = 'Please specify other skills';
-    }
+    // if (formData.skills.includes('Other') && !formData.otherSkills.trim()) {
+    //   errors.otherSkills = 'Please specify other skills';
+    // }
     
-    // Validate commitment level
-    if (!formData.availability.weekdays && !formData.availability.weekends) {
-      errors.availability = 'Please indicate your availability';
-    }
-    if (!formData.commitmentLevel) errors.commitmentLevel = 'Please indicate your time commitment';
+    // // Validate commitment level
+    // if (!formData.availability.weekdays && !formData.availability.weekends) {
+    //   errors.availability = 'Please indicate your availability';
+    // }
+    // if (!formData.commitmentLevel) errors.commitmentLevel = 'Please indicate your time commitment';
 
-    // Validate experience
-    if (!formData.experience.trim()) errors.experience = 'Please share your previous experience with volunteering or community service';
+    // // Validate experience
+    // if (!formData.experience.trim()) errors.experience = 'Please share your previous experience with volunteering or community service';
     
-    // Validate motivation
-    if (!formData.motivation.trim()) errors.motivation = 'Please share your motivation for volunteering';
+    // // Validate motivation
+    // if (!formData.motivation.trim()) errors.motivation = 'Please share your motivation for volunteering';
     
-    // Validate emergency contact for non-empty fields
-    if (formData.emergencyContactName && !formData.emergencyContactPhone) {
-      errors.emergencyContactPhone = 'Emergency contact phone is required';
-    }
+    // // Validate emergency contact for non-empty fields
+    // if (formData.emergencyContactName && !formData.emergencyContactPhone) {
+    //   errors.emergencyContactPhone = 'Emergency contact phone is required';
+    // }
     
     // Validate terms agreement
     if (!formData.agreeToTerms) errors.agreeToTerms = 'You must agree to the terms and conditions';
@@ -223,22 +223,20 @@ export default function VolunteerRegistrationPage() {
       setIsSubmitting(true);
       
       try {
-        // Simulate API call to backend
-        // In production, replace with actual API call:
-        // const response = await fetch('/api/volunteer-registration', {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/json' },
-        //   body: JSON.stringify(formData)
-        // });
-        // if (!response.ok) throw new Error('Failed to submit form');
+        const response = await fetch('https://formspree.io/f/xrbqpdrp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+        if (!response.ok) throw new Error('Failed to submit form');
         
         await new Promise(resolve => setTimeout(resolve, 1500));
         setSubmitSuccess(true);
       } catch (error) {
-        console.error('Error submitting form:', error);
+        console.error('Error Submitting Form:', error);
         setFormErrors({
           ...formErrors,
-          submit: 'Failed to submit form. Please try again later.'
+          submit: 'Failed to submit Form. Please try again later.'
         });
       } finally {
         setIsSubmitting(false);
@@ -950,12 +948,12 @@ export default function VolunteerRegistrationPage() {
                     type="checkbox"
                     name="terms"
                     id="terms"
-                    checked={formData.terms}
+                    checked={formData.agreeToTerms}
                     onChange={handleInputChange}
                     className={`focus:ring-primary h-4 w-4 text-primary border-gray-300 rounded ${formErrors.terms ? 'border-red-500' : ''}`}
                   />
-                  {formErrors.terms && (
-                    <p className="mt-2 text-sm text-red-600">{formErrors.terms}</p>
+                  {formErrors.agreeToTerms && (
+                    <p className="mt-2 text-sm text-red-600">{formErrors.agreeToTerms}</p>
                   )}
                   <p className="text-sm text-gray-500">
                     By checking this box, you agree to our terms and conditions.

@@ -17,11 +17,11 @@ export default function Blog() {
   const blogPosts = [
     {
       id: 1,
-      title: 'Empowering Women Through Financial Literacy',
-      excerpt: 'How our financial literacy program is helping women gain economic independence and security.',
-      image: '/images/blog/financial-literacy.jpg',
+      title: 'Shiksha Ki Amrit Yatra: A Journey of Knowledge with N.A.V Yuva Foundation',
+      excerpt: 'Education plays a crucial role in providing direction and purpose in life. Our country boasts a rich heritage of educational resources, including insightful textbooks and ancient scriptures that have guided humanity for thousands of years.',
+      image: '/assets/programs/education_initiative/career_counselling.jpg',
       date: 'June 15, 2023',
-      slug: 'empowering-women-through-financial-literacy',
+      slug: 'https://beeblogs.medium.com/shiksha-ki-amrit-yatra-a-journey-of-knowledge-with-n-a-v-yuva-foundation-c1c568bdaa28',
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ export default function Blog() {
   ];
   
   return (
-    <div className="relative">
+    <div className="relative bg-gray-200">
       <div className='relative bg-black cursor-default'>
         <div className="h-24 md:h-44">
           <Image
@@ -64,7 +64,7 @@ export default function Blog() {
       </div>
 
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">
+      <h1 className="flex text-3xl justify-center items-center font-extrabold text-gray-900 sm:text-4xl mb-16">
         Blog & News
       </h1>
       
@@ -82,9 +82,9 @@ export default function Blog() {
             </div>
             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
               <div className="flex-1">
-                <p className="text-sm font-medium text-primary">
+                {/* <p className="text-sm font-medium text-primary">
                   {post.date}
-                </p>
+                </p> */}
                 <Link href={`/blog/${post.slug}`} className="block mt-2">
                   <p className="text-xl font-semibold text-gray-900 hover:text-primary transition-colors">{post.title}</p>
                   <p className="mt-3 text-base text-gray-500">{post.excerpt}</p>
@@ -92,10 +92,11 @@ export default function Blog() {
               </div>
               <div className="mt-6">
                 <Link
-                  href={`/blog/${post.slug}`}
-                  className="text-primary hover:text-primary-dark font-medium inline-flex items-center"
+                  href={post.slug}
+                  target='_blank'
+                  className="font-medium inline-flex items-center hover:text-cyan-500 transition-all duration-300 ease-in-out"
                 >
-                  Read full story 
+                  Read Blog
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
