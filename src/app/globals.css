@@ -36,3 +36,17 @@ body {
     margin: 0 !important;
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  /* border-radius: 9999px; */
+  background-color: silver;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background-color: #23c5ca;
+}

@@ -54,7 +54,7 @@ export default function Footer() {
               <li><Link href="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
               <li><Link href="/programs" className="text-gray-300 hover:text-white">Programs</Link></li>
               {/* <li><Link href="/impact-stories" className="text-gray-300 hover:text-white">Impact Stories</Link></li> */}
-              <li><Link href="/get-involved" className="text-gray-300 hover:text-white">Get Involved</Link></li>
+              <li><Link href="/get_involved" className="text-gray-300 hover:text-white">Get Involved</Link></li>
               <li><Link href="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
             </ul>

@@ -9,7 +9,7 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'Impact Stories | N.A.V Yuva Foundation',
+  title: 'Impact Stories - N.A.V Yuva Foundation',
   description: 'Read inspiring stories of transformation and change from N.A.V Yuva Foundation\'s community development initiatives across rural India.',
 };
 
@@ -303,7 +303,7 @@ export default function ImpactStoriesPage() {
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
-              <Link href="/get-involved" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-100">
+              <Link href="/get_involved" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-100">
                 Get Involved
               </Link>
             </div>

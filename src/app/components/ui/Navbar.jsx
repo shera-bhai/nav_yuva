@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between w-full h-16">
+        <div className="flex items-center justify-between md:justify-center w-full h-16">
           <div className="flex items-center">
             <Link href="/" className=" my-4 font-bold text-xl">
               <Image src="/assets/logo.png" alt="NAV Yuva Foundation" width={110} height={40} />
@@ -105,8 +105,8 @@ export default function Navbar() {
                 </MenuItems>
               </Menu>
 
-              <Link href="/get-involved" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/get-involved' ? 'text-[#23c5ca]' : 'text-black'} hover:text-[#23c5ca] transition duration-300 ease-in-out`}>Get Involved</Link>
-              <Link href="/blog" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/blog' ? 'text-[#23c5ca]' : 'text-black'} hover:text-[#23c5ca] transition duration-300 ease-in-out`}>Blog</Link>
+              <Link href="/get_involved" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/get_involved' ? 'text-[#23c5ca]' : 'text-black'} hover:text-[#23c5ca] transition duration-300 ease-in-out`}>Get Involved</Link>
+              <Link href="/blogs" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/blogs' ? 'text-[#23c5ca]' : 'text-black'} hover:text-[#23c5ca] transition duration-300 ease-in-out`}>Blogs</Link>
               <Link href="/contact" className={`px-3 py-2 rounded-md text-sm font-medium ${pathname === '/contact' ? 'text-[#23c5ca]' : 'text-black'} hover:text-[#23c5ca] transition duration-300 ease-in-out`}>Contact</Link>
               <Link href="https://rzp.io/rzp/cGixej34" target="_blank" 
               className="px-3 py-2 text-sm font-medium text-white bg-cyan-300 hover:text-black hover:bg-cyan-400 transition duration-300 ease-in-out"
@@ -156,7 +156,8 @@ export default function Navbar() {
             </Accordion>
             {/* <Link href="/programs" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium">Programs</Link> */}
             {/* <Link href="/impact-stories" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium">Impact Stories</Link> */}
-            <Link href="/get-involved" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium">Get Involved</Link>
+            <Link href="/get_involved" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium">Get Involved</Link>
+            <Link href="/blogs" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium">Blogs</Link>
             {/* <Link href="/resources" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium">Resources</Link> */}
             <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
             <Link href="https://rzp.io/rzp/cGixej34" target='_blank' onClick={() => setIsMenuOpen(false)}

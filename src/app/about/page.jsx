@@ -8,7 +8,7 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'About Us | N.A.V Yuva Foundation',
+  title: 'About Us - N.A.V Yuva Foundation',
   description: 'Learn about our mission, vision, values, and the team behind our women empowerment initiatives.',
 };
 
@@ -114,7 +114,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Mission */}
-            <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-default" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+            <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-default" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
               <div className="relative h-80">
                 <Image
                   src="/assets/about/mission.jpg"
@@ -132,7 +132,7 @@ export default function AboutPage() {
             </div>
 
             {/* Vision */}
-            <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-default" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
+            <div className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-default" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
               <div className="relative h-80">
                 <Image
                   src="/assets/about/vision.jpg"
@@ -285,7 +285,7 @@ export default function AboutPage() {
                   className='object-contain'
                 />
               </div>
-              <p data-aos="fade" data-aos-anchor-placement="bottom-bottom" data-aos-delay="500">
+              <p data-aos="fade" data-aos-anchor-placement="bottom-bottom" data-aos-delay="1000">
                 We are pleased to announce that our organization has been officially accredited as a member of the Youth Democracy Cohort (YDC). This esteemed recognition underscores our commitment to empowering the voices of young individuals and promoting democratic values. As an accredited member, we are dedicated to fostering civic engagement, enhancing inclusivity, and providing a platform for youth to influence their communities and societies. This achievement reinforces our determination to advocate for constructive change and to create opportunities for young people to engage actively in the democratic process.
               </p>
             </div>
@@ -336,7 +336,7 @@ export default function AboutPage() {
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
               <Link
-                href="/get-involved/volunteer"
+                href="/get_involved/volunteer_registration"
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:text-[#23c5ca] mb-4 sm:mb-0 transition duration-300 ease-in-out"
               >
                 Volunteer With Us

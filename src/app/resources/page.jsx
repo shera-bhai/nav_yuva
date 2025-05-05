@@ -9,7 +9,7 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'Resources | N.A.V Yuva Foundation',
+  title: 'Resources - N.A.V Yuva Foundation',
   description: 'Access educational materials, women empowerment guides, environmental resources, youth development tools, and more. Empowering communities through knowledge and support.',
 };
 
@@ -463,7 +463,7 @@ export default function ResourcesPage() {
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 space-x-4">
             <Link 
-              href="/get-involved" 
+              href="/get_involved" 
               className="inline-flex items-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:bg-gray-100"
             >
               Get Involved

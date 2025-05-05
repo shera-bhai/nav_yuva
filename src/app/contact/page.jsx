@@ -9,7 +9,7 @@ export const metadata = {
     shortcut: '/assets/navyf.png',
     apple: '/assets/navyf.png',
   },
-  title: 'Contact Us | N.A.V Yuva Foundation',
+  title: 'Contact - N.A.V Yuva Foundation',
   description: 'Reach out to N.A.V Yuva Foundation for partnerships, volunteer opportunities, or to learn more about our community development initiatives.',
 };
 

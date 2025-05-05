@@ -23,7 +23,7 @@ export default function Hero() {
         </p>
         <div className="hidden mt-10 md:flex flex-col sm:flex-row gap-4">
           <Link
-            href="/get-involved"
+            href="/get_involved"
             className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-black bg-white hover:bg-[#23c5ca] hover:text-white transition duration-300 ease-in-out"
           >
             Get Involved

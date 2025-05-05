@@ -17,7 +17,7 @@ export default function CallToAction() {
             Donate Now
           </Link>
           <Link
-            href="/get-involved/volunteer"
+            href="/get_involved/volunteer_registration"
             className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white hover:text-black transition duration-300 ease-in-out"
           >
             Volunteer
