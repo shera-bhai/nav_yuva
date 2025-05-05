@@ -131,7 +131,7 @@ export default function ProgramsPage() {
       title: "Mobile Health Assistance",
       description: "Delivering healthcare services and preventive awareness along with free check-ups and consultation ensuring that essential health support reaches those who need it most , right at their doorsteps.",
       impact: "Conducted mobile health camps in the backward areas of the city.",
-      image: "/assets/programs/blood_donation/medical_camp.jpg"
+      image: "/assets/programs/health_nutrition/medical_camp.jpg"
     },
     {
       category: "blood-donation",
