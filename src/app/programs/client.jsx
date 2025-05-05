@@ -2,7 +2,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { Accordion, AccordionHeader, AccordionBody } from "@material-tailwind/react";
 
 function Icon({ id, open }) {
@@ -21,6 +21,11 @@ function Icon({ id, open }) {
 }
 
 export default function ProgramsPage() {
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   // Program categories data
   const programCategories = [
     {
@@ -351,7 +356,7 @@ export default function ProgramsPage() {
     { number: "1,000+", label: "Blood Units Collected" }
   ];
 
-  const [open, setOpen] = React.useState(0);
+  const [open, setOpen] = useState(false);
 
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 

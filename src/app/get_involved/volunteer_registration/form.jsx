@@ -1,9 +1,9 @@
 // app/volunteer-registration/page.js
 'use client';
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function VolunteerRegistrationPage() {
   // Form state management
@@ -44,7 +44,66 @@ export default function VolunteerRegistrationPage() {
   // Form validation state
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(null);
+
+  const pathname = usePathname();
+
+  // Reset form state when the user navigates to this page
+  useEffect(() => {
+    if (pathname === '/volunteer-registration') {
+      setSubmitSuccess(null); // Reset to initial state
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        address: '',
+        city: '',
+        state: '',
+        pincode: '',
+        occupation: '',
+        education: '',
+        dob: '',
+        gender: '',
+        skills: [],
+        otherSkills: '',
+        interests: [],
+        availability: {
+          weekdays: false,
+          weekends: false,
+          mornings: false,
+          afternoons: false,
+          evenings: false,
+        },
+        commitmentLevel: '',
+        experience: '',
+        motivation: '',
+        emergencyContactName: '',
+        emergencyContactPhone: '',
+        emergencyContactRelation: '',
+        emergencyContactEmail: '',
+        emergencyContactAddress: '',
+        emergencyContactCity: '',
+        emergencyContactState: '',
+        emergencyContactPincode: '',
+        terms: false,
+        receiveUpdates: false,
+      });
+      setFormErrors({});
+      setIsSubmitting(false);
+    }
+  }, [pathname]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  // Scroll to top when submitSuccess changes to true or false
+  useEffect(() => {
+    if (submitSuccess !== null) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [submitSuccess]);
 
   // Volunteer interest areas based on foundation's focus
   const interestAreas = [
@@ -163,12 +222,12 @@ export default function VolunteerRegistrationPage() {
   const validateForm = () => {
     const errors = {};
     
-  //   // Required fields validation
-    if (!formData.firstName.trim()) errors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) errors.lastName = 'Last name is required';
+    // Required fields validation
+    if (!formData.firstName.trim()) errors.firstName = 'First Name is required';
+    if (!formData.lastName.trim()) errors.lastName = 'Last Name is required';
     if (!formData.email.trim()) errors.email = 'Email is required';
     else if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = 'Email is invalid';
-    if (!formData.phone.trim()) errors.phone = 'Phone number is required';
+    if (!formData.phone.trim()) errors.phone = 'Phone Number is required';
     if (!formData.address.trim()) errors.address = 'Address is required';
     if (!formData.city.trim()) errors.city = 'City is required';
     if (!formData.state.trim()) errors.state = 'State is required';
@@ -197,11 +256,18 @@ export default function VolunteerRegistrationPage() {
     
     // Validate motivation
     if (!formData.motivation.trim()) errors.motivation = 'Please share your motivation for volunteering';
-    
+
     // Validate emergency contact for non-empty fields
-    if (formData.emergencyContactName && !formData.emergencyContactPhone) {
-      errors.emergencyContactPhone = 'Emergency contact phone is required';
-    }
+    if (!formData.emergencyContactName) { errors.emergencyContactName = 'Name is required'; }
+    if (!formData.emergencyContactPhone) { errors.emergencyContactPhone = 'Phone Number is required'; }
+    if (!formData.emergencyContactRelation) { errors.emergencyContactRelation = 'Relation is required'; }
+    if (!formData.emergencyContactAddress) { errors.emergencyContactAddress = 'Address is required'; }
+    if (!formData.emergencyContactCity) { errors.emergencyContactCity = 'City is required'; }
+    if (!formData.emergencyContactEmail) { errors.emergencyContactEmail = 'Email is required'; }
+    else if (!/\S+@\S+\.\S+/.test(formData.emergencyContactEmail)) { errors.emergencyContactEmail = 'Email is invalid'; }
+    if (!formData.emergencyContactPincode) { errors.emergencyContactPincode = 'Pincode is required'; }
+    else if (!/^\d{6}$/.test(formData.emergencyContactPincode)) { errors.emergencyContactPincode = 'PIN Code must be 6 digits'; }
+    if (!formData.emergencyContactState) { errors.emergencyContactState = 'State is required'; }
     
     // Validate terms agreement
     if (!formData.terms) errors.terms = 'You must agree to the terms and conditions';
@@ -218,7 +284,7 @@ export default function VolunteerRegistrationPage() {
       setIsSubmitting(true);
       
       try {
-        const response = await fetch('https://formspree.io/f/xrbqpdrp', {
+        const response = await fetch('https://formspree.io/f/xrbqpdr', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
@@ -233,6 +299,7 @@ export default function VolunteerRegistrationPage() {
           ...formErrors,
           submit: 'Failed to submit Form. Please try again later.'
         });
+        setSubmitSuccess(false);
       } finally {
         setIsSubmitting(false);
       }
@@ -240,7 +307,7 @@ export default function VolunteerRegistrationPage() {
   };
 
   // If form submission was successful, show success view
-  if (submitSuccess) {
+  if (submitSuccess === true) {
     return (
       <div className="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
@@ -291,6 +358,56 @@ export default function VolunteerRegistrationPage() {
                 </Link>
                 <Link href="/get_involved" className="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium hover:bg-[#23c5ca] hover:text-white transition duration-300 ease-in-out">
                   Explore Other Ways to Help
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (submitSuccess === false) {
+    return (
+      <div className="bg-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="pt-8 px-4 sm:px-10 text-center">
+            <div className="mx-auto h-40 w-40 relative">
+              <Image
+                src="/assets/logo.png"
+                alt="N.A.V Yuva Foundation Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+          
+          <div className="pb-4 px-4 sm:px-10">
+            <div className="text-center">
+              <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-red-100 mb-6">
+                <svg className="h-7 w-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M3 3l18 18M21 3L3 21" />
+                </svg>
+              </div>
+              
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Your Volunteer Application Was Unable to Submit!
+              </h3>
+              
+              <p className="text-gray-600">
+                If the issue persists, get in touch with us via the form on our Contact page.
+              </p>
+              <p className="text-gray-600 mb-6">
+                We will help to resolve the issue as soon as possible.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link href="/" className="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium hover:bg-[#23c5ca] hover:text-white transition duration-300 ease-in-out">
+                  Return to Homepage
+                </Link>
+                <Link href="/contact" className="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium hover:bg-[#23c5ca] hover:text-white transition duration-300 ease-in-out">
+                  Contact Us
                 </Link>
               </div>
             </div>
@@ -518,7 +635,7 @@ export default function VolunteerRegistrationPage() {
 
               <div className="sm:col-span-3">
                 <label htmlFor="occupation" className="block text-sm font-medium text-gray-700">
-                  Occupation
+                  Occupation *
                 </label>
                 <div className="mt-1">
                   <input
@@ -537,7 +654,7 @@ export default function VolunteerRegistrationPage() {
 
               <div className="sm:col-span-3">
                 <label htmlFor="education" className="block text-sm font-medium text-gray-700">
-                  Highest Education
+                  Highest Education *
                 </label>
                 <div className="mt-1">
                   <select
@@ -547,7 +664,7 @@ export default function VolunteerRegistrationPage() {
                     onChange={handleInputChange}
                     className="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md"
                   >
-                    <option value="">Select education level</option>
+                    <option value="">Select Education Level</option>
                     <option value="High School">High School</option>
                     <option value="Diploma">Diploma</option>
                     <option value="Bachelor's Degree">Bachelor's Degree</option>
@@ -607,7 +724,7 @@ export default function VolunteerRegistrationPage() {
               <div className="mt-6">
                 <fieldset>
                   <legend className="text-base font-medium text-gray-900">
-                    Skills & Expertise
+                    Skills & Expertise *
                   </legend>
                   <p className="text-sm text-gray-500">Select all that apply</p>
                   <div className="mt-2 space-y-2">
@@ -846,7 +963,7 @@ export default function VolunteerRegistrationPage() {
                 </div>
                 <div className="sm:col-span-3">
                   <label htmlFor="emergencyContactEmail" className="block text-sm font-medium text-gray-700">
-                    Email Address
+                    Email Address *
                   </label>
                   <div className="mt-1">
                     <input
@@ -857,11 +974,14 @@ export default function VolunteerRegistrationPage() {
                       onChange={handleInputChange}
                       className="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md"
                     />
+                    {formErrors.emergencyContactEmail && (
+                      <p className="mt-2 text-sm text-red-600">{formErrors.emergencyContactEmail}</p>
+                    )}
                   </div>
                 </div>
                 <div className="sm:col-span-3">
                   <label htmlFor="emergencyContactAddress" className="block text-sm font-medium text-gray-700">
-                    Address
+                    Address *
                   </label>
                   <div className="mt-1">
                     <input
@@ -872,11 +992,14 @@ export default function VolunteerRegistrationPage() {
                       onChange={handleInputChange}
                       className="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md"
                     />
+                    {formErrors.emergencyContactAddress && (
+                      <p className="mt-2 text-sm text-red-600">{formErrors.emergencyContactAddress}</p>
+                    )}
                   </div>
                 </div>
                 <div className="sm:col-span-3">
                   <label htmlFor="emergencyContactCity" className="block text-sm font-medium text-gray-700">
-                    City
+                    City *
                   </label>
                   <div className="mt-1">
                     <input
@@ -887,11 +1010,14 @@ export default function VolunteerRegistrationPage() {
                       onChange={handleInputChange}
                       className="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md"
                     />
+                    {formErrors.emergencyContactCity && (
+                      <p className="mt-2 text-sm text-red-600">{formErrors.emergencyContactCity}</p>
+                    )}
                   </div>
                 </div>
                 <div className="sm:col-span-3">
                   <label htmlFor="emergencyContactState" className="block text-sm font-medium text-gray-700">
-                    State
+                    State *
                   </label>
                   <div className="mt-1">
                     <select
@@ -902,18 +1028,21 @@ export default function VolunteerRegistrationPage() {
                       onChange={handleInputChange}
                       className="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md"
                     >
-                    <option value="" disabled hidden>Select State</option>
-                    {indianStates.map((state) => (
-                      <option key={state} value={state}>
-                        {state}
-                      </option>
-                    ))}
+                      <option value="" disabled selected hidden>Select State</option>
+                      {indianStates.map((state) => (
+                        <option key={state} value={state}>
+                          {state}
+                        </option>
+                      ))}
                     </select>
+                    {formErrors.emergencyContactState && (
+                      <p className="mt-2 text-sm text-red-600">{formErrors.emergencyContactState}</p>
+                    )}
                   </div>
                 </div>
                 <div className="sm:col-span-3">
                   <label htmlFor="emergencyContactPincode" className="block text-sm font-medium text-gray-700">
-                    PIN Code
+                    PIN Code *
                   </label>
                   <div className="mt-1">
                     <input
@@ -924,6 +1053,9 @@ export default function VolunteerRegistrationPage() {
                       onChange={handleInputChange}
                       className="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md"
                     />
+                    {formErrors.emergencyContactPincode && (
+                      <p className="mt-2 text-sm text-red-600">{formErrors.emergencyContactPincode}</p>
+                    )}
                   </div>
                 </div>
               </div>

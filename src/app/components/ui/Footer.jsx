@@ -55,18 +55,19 @@ export default function Footer() {
               <li><Link href="/programs" className="text-gray-300 hover:text-white">Programs</Link></li>
               {/* <li><Link href="/impact-stories" className="text-gray-300 hover:text-white">Impact Stories</Link></li> */}
               <li><Link href="/get_involved" className="text-gray-300 hover:text-white">Get Involved</Link></li>
-              <li><Link href="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
+              <li><Link href="/blogs" className="text-gray-300 hover:text-white">Blogs</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
             </ul>
           </div>
 
           {/* Policy Links */}
           <div>
-            <h2 className="text-lg font-bold mb-4">Policy</h2>
+            <h2 className="text-lg font-bold mb-4">Policies</h2>
             <ul className="space-y-2">
               <li><Link href="https://drive.google.com/file/d/1ej3gRr4UaO-AaatPcnlEYNDDhGm2xT4-/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
               <li><Link href="https://drive.google.com/file/d/1CTer4725zuRS6wN955KQPwvFnBO8BJPn/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Donation Policy</Link></li>
               <li><Link href="https://drive.google.com/file/d/1iG8drncZ2SWAVy_bV1Ad9v1nvLYgKv9l/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Shipping Policy</Link></li>
+              <li><Link href="https://drive.google.com/file/d/1d5Vu5xzmu6mhuEjN3wqbQtDlfPG3n55x/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Volunteer Policy</Link></li>
               <li><Link href="https://drive.google.com/file/d/18Vb5ep4uFzZQd634b8Jvme4neQxw3vNP/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Terms & Conditions</Link></li>
               <li><Link href="https://drive.google.com/file/d/1hi_8S1z2KeWGq7Dmh5qbuXubUAyJIt0U/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Cancellation & Refund Policy</Link></li>
             </ul>
