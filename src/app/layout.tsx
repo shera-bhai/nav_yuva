@@ -8,7 +8,6 @@ import Chatbot from './components/Chatbot';
 import Navbar from './components/ui/Navbar';
 import Footer from './components/ui/Footer';
 import { ReactNode, useEffect } from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ['latin'] });
 

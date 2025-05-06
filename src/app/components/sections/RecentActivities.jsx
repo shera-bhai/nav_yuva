@@ -52,9 +52,9 @@ export default function RecentActivities() {
               </div>
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-primary">
+                  {/* <p className="text-sm font-medium text-primary">
                     {activity.date}
-                  </p>
+                  </p> */}
                   <h3 className="mt-2 text-xl font-semibold text-gray-900">{activity.title}</h3>
                   <p className="mt-3 text-base text-gray-500">{activity.description}</p>
                 </div>

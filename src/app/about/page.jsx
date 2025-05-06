@@ -8,7 +8,7 @@ export const metadata = {
     apple: '/assets/navyf.png',
   },
   title: 'About Us - N.A.V Yuva Foundation',
-  description: 'Learn about our mission, vision, values, and the team behind our women empowerment initiatives.',
+  description: 'Learn about our mission, values, and the impact we’re making in communities through sustainable development and empowerment',
 };
 
 export default function Page() {

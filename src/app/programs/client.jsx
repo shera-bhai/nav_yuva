@@ -22,9 +22,9 @@ function Icon({ id, open }) {
 
 export default function ProgramsPage() {
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }, []);
 
   // Program categories data
   const programCategories = [
@@ -688,9 +688,9 @@ export default function ProgramsPage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg md:text-3xl font-semibold text-gray-900">From N.A.V Yuva Chhatra Sansad to the Indian Parliament</h3>
+                <h3 className="text-lg md:text-3xl font-semibold text-gray-900">Growing with N.A.V. Yuva Foundation</h3>
                 <p className="mt-2 text-sm md:text-base text-gray-500">
-                  "Joining N.A.V. Yuva Foundation provided me with not just a start but a family that believed in my potential. As City Captain, I led the tree plantation drive ‘Ped Ek Jeevan Anek,’ which strengthened my commitment to environmental sustainability. Participating in cleanliness drives and awareness campaigns helped me evolve into a socially responsible leader. Today, I'm proud of my journey and dedicated to giving back by mentoring new volunteers and organizing meaningful events in line with the mission of N.A.V Yuva Foundation."
+                  "Joining N.A.V. Yuva Foundation gave me a supportive start and a belief in my potential. Leading drives like ‘Ped Ek Jeevan Anek’ shaped my commitment to sustainability and social responsibility. Today, I mentor new volunteers and continue contributing to its mission."
                 </p>
                 {/* <div className="mt-4">
                   <Link href="/impact-stories/sundarpur" className="text-primary hover:text-primary-dark font-medium">
@@ -736,8 +736,8 @@ export default function ProgramsPage() {
             <span className="block">Want to support our programs?</span>
             <span className="block text-primary-light">Join us in creating positive change.</span>
           </h2>
-          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0 gap-4 flex-wrap">
-            <Link href="/get_involved/volunteer_registration" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:text-[#23c5ca] mb-4 sm:mb-0 transition duration-300 ease-in-out">
+          <div className="mt-8 inline-flex lg:mt-0 lg:flex-shrink-0 gap-4">
+            <Link href="/get_involved/volunteer_registration" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:text-[#23c5ca] transition duration-300 ease-in-out">
               Volunteer With Us
             </Link>
             <Link href="https://rzp.io/rzp/cGixej34" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white hover:text-black transition duration-300 ease-in-out">

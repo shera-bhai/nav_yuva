@@ -284,7 +284,7 @@ export default function VolunteerRegistrationPage() {
       setIsSubmitting(true);
       
       try {
-        const response = await fetch('https://formspree.io/f/xrbqpdr', {
+        const response = await fetch('https://formspree.io/f/xrbqpdrp', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
@@ -339,7 +339,7 @@ export default function VolunteerRegistrationPage() {
               </h3>
               
               <p className="text-gray-600 mb-6">
-                Thank you for your interest in volunteering with N.A.V Yuva Foundation. Our team will review your application and contact you within 3-5 business days to discuss the next steps in the volunteer onboarding process.
+              Your application has been successfully submitted. Our team will review it and get in touch with you within 2–3 working days.
               </p>
               
               <div className="bg-gray-100 p-4 rounded-lg mb-6">
@@ -396,7 +396,7 @@ export default function VolunteerRegistrationPage() {
               </h3>
               
               <p className="text-gray-600">
-                If the issue persists, get in touch with us via the form on our Contact page.
+                Your application could not be submitted due to a technical issue. If the problem persists, please contact our team at <a className='underline' href='mailto:contact@navyuva.org'>contact@navyuva.org</a> for assistance.
               </p>
               <p className="text-gray-600 mb-6">
                 We will help to resolve the issue as soon as possible.

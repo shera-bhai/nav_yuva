@@ -8,7 +8,7 @@ export const metadata = {
     apple: '/assets/navyf.png',
   },
   title: 'Programs - N.A.V Yuva Foundation',
-  description: 'Explore N.A.V Yuva Foundation\'s diverse programs focused on education, women empowerment, environmental conservation, health initiatives, and youth development.',
+  description: 'Explore N.A.V Yuva Foundation\'s diverse programs focused on education, women empowerment, environmental conservation, health initiatives, youth development and blood donation.',
 };
 
 export default function Programs() {

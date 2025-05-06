@@ -9,10 +9,10 @@ export default function CallToAction() {
           <span className="block">Ready to make a difference?</span>
           <span className="block text-secondary">Join our mission today.</span>
         </h2>
-        <div className="mt-8 flex flex-col sm:flex-row sm:gap-4 lg:mt-0 lg:flex-shrink-0">
+        <div className="mt-8 inline-flex sm:gap-4 lg:mt-0 lg:flex-shrink-0">
           <Link
             href="https://rzp.io/rzp/cGixej34" target='_blank'
-            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:text-[#23c5ca] mb-4 sm:mb-0 transition duration-300 ease-in-out"
+            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:text-[#23c5ca] transition duration-300 ease-in-out"
           >
             Donate Now
           </Link>

@@ -69,7 +69,7 @@ export default function Footer() {
               <li><Link href="https://drive.google.com/file/d/1iG8drncZ2SWAVy_bV1Ad9v1nvLYgKv9l/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Shipping Policy</Link></li>
               <li><Link href="https://drive.google.com/file/d/1d5Vu5xzmu6mhuEjN3wqbQtDlfPG3n55x/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Volunteer Policy</Link></li>
               <li><Link href="https://drive.google.com/file/d/18Vb5ep4uFzZQd634b8Jvme4neQxw3vNP/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Terms & Conditions</Link></li>
-              <li><Link href="https://drive.google.com/file/d/1hi_8S1z2KeWGq7Dmh5qbuXubUAyJIt0U/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Cancellation & Refund Policy</Link></li>
+              <li><Link href="https://drive.google.com/file/d/1hi_8S1z2KeWGq7Dmh5qbuXubUAyJIt0U/view?usp=sharing" target='_blank' className="text-gray-300 hover:text-white">Cancellation & Refund</Link></li>
             </ul>
           </div>
           

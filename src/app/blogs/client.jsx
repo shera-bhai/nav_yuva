@@ -30,11 +30,11 @@ export default function Blog() {
     },
     {
       id: 2,
-      title: 'Creating Safe Spaces for Women in Rural Communities',
-      excerpt: 'Our initiatives in rural areas are providing women with safe environments for growth and support.',
-      image: '/assets/programs/education_initiative/career_counselling.jpg',
+      title: '“Giving Life, One Drop at a Time” — N.A.V. Yuva Foundation’s Mission of Compassion',
+      excerpt: 'Blood donation is one of the most selfless acts a person can perform. Each unit of blood tells a story-be it a child recuperating from surgery, a mother successfully delivering her baby, or a patient clinging to hope during a critical juncture.',
+      image: '/assets/blogs/blood_donation.jpeg',
       date: 'July 10, 2023',
-      slug: 'creating-safe-spaces-for-women',
+      slug: 'https://beeblogs.medium.com/giving-life-one-drop-at-a-time-n-a-v-yuva-foundations-mission-of-compassion-cb598523cd91',
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ export default function Blog() {
   return (
     <div className="relative bg-gray-200">
       <div className='relative bg-black cursor-default'>
-        <div className="h-24 md:h-44">
+        <div className="h-64 md:h-44">
           <Image
             src="/assets/blogs/blogs.jpg"
             alt="Blogs | N.A.V Yuva Foundation"

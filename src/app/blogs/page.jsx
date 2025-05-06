@@ -8,7 +8,7 @@ export const metadata = {
     apple: '/assets/navyf.png',
   },
   title: 'Blogs - N.A.V Yuva Foundation',
-  description: 'Latest articles, success stories, and updates from our women empowerment initiatives.',
+  description: 'Stay informed and inspired with our latest updates, stories, and insights on our blog.',
 };
 
 export default function Page() {

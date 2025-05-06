@@ -270,7 +270,7 @@ export default function GetInvolvedPage() {
                     <p className="text-base text-gray-500">{partnership.description}</p>
                   </div>
                 </div>
-                <div className="bg-gray-100 px-6 py-3">
+                <div className="bg-gray-200 px-6 py-3">
                   <div className="text-sm">
                     <Link href="mailto:contact@navyuva.org" className="font-medium hover:text-cyan-500 transition-all duration-300 ease-in-out">
                       Discuss partnership opportunities  →
@@ -320,7 +320,7 @@ export default function GetInvolvedPage() {
             ))}
           </div>
           <div className="mt-12 bg-gray-100 rounded-lg overflow-hidden shadow">
-            <div className="px-6 pt-8 sm:p-10">
+            <div className="px-6 py-10 pt-8 sm:p-10">
               <div className="text-center">
                 <h3 className="text-4xl font-bold text-gray-900">Corporate Social Responsibility</h3>
                 <p className="mt-8 text-lg text-gray-500 text-justify">
@@ -390,8 +390,8 @@ export default function GetInvolvedPage() {
             <span className="block text-primary-light">Join us today and help transform lives.</span>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-            <div className="inline-flex rounded-md shadow">
-              <Link href="/get_involved/volunteer_registration" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:text-[#23c5ca] mb-4 sm:mb-0 transition duration-300 ease-in-out">
+            <div className="inline-flex rounded-md md:shadow">
+              <Link href="/get_involved/volunteer_registration" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-white hover:text-[#23c5ca] transition duration-300 ease-in-out">
                 Become a Volunteer
               </Link>
             </div>
