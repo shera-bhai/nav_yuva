@@ -38,14 +38,14 @@ export default function Blog() {
     },
     {
       id: 3,
-      title: 'The Impact of Mentorship on Young Women',
-      excerpt: 'How our mentorship programs are shaping the future of young women in education and careers.',
-      image: '/assets/programs/education_initiative/career_counselling.jpg',
+      title: 'N.A.V Yuva Foundation: Rising Among India’s Top NGOs for Empowerment',
+      excerpt: 'In a world where inequality frequently impedes access to fundamental rights such as education and opportunity, non-governmental organizations (NGOs) play a pivotal role in addressing this disparity.',
+      image: '/assets/blogs/top_ngo.png',
       date: 'August 5, 2023',
-      slug: 'impact-of-mentorship-young-women',
+      slug: 'https://beeblogs.medium.com/n-a-v-yuva-foundation-rising-among-indias-top-ngos-for-empowerment-b2a4e49cc82b',
     },
   ];
-  
+
   return (
     <div className="relative bg-gray-200">
       <div className='relative bg-black cursor-default'>
